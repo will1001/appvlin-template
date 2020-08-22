@@ -48,7 +48,7 @@
             height: 100%;
             width:100%;
             @include breakpoint(phone){
-                height: 190%;
+                height: 210%;
             }
         }
     }
@@ -112,6 +112,7 @@
             }
             @include breakpoint(tablet){
                 width: 100%;
+                margin-top: 0px;
             }
         }
     }
@@ -227,6 +228,7 @@
         }
         @include breakpoint(tablet){
             padding: 25px 30px;
+            margin-top: 0px;
         }
     }
 }
@@ -311,7 +313,7 @@
         right: 30px;
         top: 213px;
         @include breakpoint(phone){
-           top:237px;
+           top:291px;
         }
         @include breakpoint(tablet){
            top:185px;
@@ -507,6 +509,9 @@
     margin-top: 10px;
     padding: 51px 70px;
     color:$white-color;
+    @include breakpoint(phone){
+        padding: 20px;
+    }
     .footer-logo{
         img{
             @include breakpoint(phone){
@@ -597,4 +602,126 @@
         background-color: $white-color;
     }
     
+}
+
+
+// Security Section
+
+.security{
+    img{
+        margin: 30px;
+        @include breakpoint(phone){
+            width: 90%;
+            margin: 10px;
+        }
+        @include breakpoint(tablet){
+            width: 90%;
+            margin: 20px;
+        }
+    }
+    .content{
+        padding-top: 96px;
+        @include breakpoint(phone){
+            margin: 10px;
+        }
+        @include breakpoint(tablet){
+            margin: 10px;
+        }
+        h5{
+            font-size: 24px;
+            line-height: 112%;
+            letter-spacing: 0.12em;
+        }
+        h2{
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 112%;
+            color: #BA77B5;
+        }
+        ul{
+            padding: 25px;
+            li{
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 27px;
+                color: #858585;
+            }
+        }
+    }
+
+}
+
+.feature{
+    .illustration{
+        padding: 45px 66px;
+        img{
+            @include breakpoint(phone){
+                width: 100%;
+            }
+            @include breakpoint(tablet){
+                width: 100%;
+            }
+        }
+    }
+    .content{
+        padding-top: 111px;
+        padding-left: 116px;
+        @include breakpoint(phone){
+            padding-left: 30px;
+        }
+        @include breakpoint(tablet){
+            padding-left: 30px;
+        }
+         h5{
+            font-size: 24px;
+            line-height: 112%;
+            letter-spacing: 0.12em;
+        }
+        h2{
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 112%;
+            color: #BA77B5;
+            @include breakpoint(phone){
+                font-size: 40px;
+            }
+        }
+        ul{
+            padding: 0px;
+            li{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                margin-top: 40px;
+                @include breakpoint(phone){
+                    svg{
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+                p{
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: #B2AFB2;
+                    margin-left: 9px;
+                    @include breakpoint(phone){
+                        font-size: 14px;
+                        line-height: 21px;
+                    }
+                }
+            }
+        }
+         .button{
+             display: flex;
+             justify-content: flex-end;
+             a{
+                 border: 1px solid #B158AC;
+                 box-sizing: border-box;
+                 border-radius: 5px;
+                 padding: 17px 77px;
+                 text-decoration: none;
+                 color: #5A4F4F;
+            }
+         }
+    }
 }
