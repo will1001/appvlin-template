@@ -1,16 +1,5 @@
 
-@mixin overlay-layer($width,$height,$right,$top) {
-    &:after{
-        content: "";
-        width: $width;
-        height: $height;
-        background-color:$primary-color;
-        opacity: 0.55;
-        position: absolute;
-        right: $right;
-        top: $top;
-    }
-}
+
 
 @mixin bg-setup($url) {
     background: url($url);
@@ -27,6 +16,56 @@
     text-decoration: none;
 }
 
+@mixin outline-button{
+    text-decoration: none;
+    color:$white-color;
+    border: 1px solid $white-color;
+    padding: 13px 50px;
+    border-radius: 5px;
+    line-height: 74px;
+}
+
+@mixin responsive-banner-slider-button{
+    width: 50px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+//animation
+
+@mixin slideInDown-anim() {
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInDown {
+  0% {
+      transform: translateY(-100%);
+      visibility: visible;
+      -webkit-transform: translateY(-100%);
+  }
+  100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+}
+@keyframes slideInDown {
+  0% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      visibility: visible;
+    }
+  100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    } 
+}
+    
 
 @mixin breakpoint($point) {
     @if $point==sm {
@@ -79,4 +118,15 @@
             @content ;
         }
     }
+    @else if $point==phone {
+        @media (min-width: 0px) and (max-width: 575px) {
+            @content ;
+        }
+    }
+    @else if $point==tablet {
+        @media (min-width: 576px) and (max-width: 991px) {
+            @content ;
+        }
+    }
+    
 }

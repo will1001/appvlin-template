@@ -3,8 +3,12 @@ $bootstrap-sass-asset-helper: false !default;
 // Variables
 // Colors
 
-$paragraph-color:#B2AFB2;
+$font-color-1:#E5E5E5;
+$font-color-2:#B2AFB2;
+$placeholder:#B2AFB2;
+$list-color:#B2AFB2;
 $footer-text-color:#D0C9C9;
+$white-color:#ffffff;
 
 $primary-color: #C266BB;
 
@@ -13,14 +17,11 @@ $primary-color: #C266BB;
 $google-play: #5E5454;
 $app-store: #7988D8;
 
-$Body: 'Open Sans', sans-serif;
-$body: 'Open Sans', sans-serif;
-$Heading:  'Josefin Sans', sans-serif;
-$heading:  'Josefin Sans', sans-serif;
+
+// font
+$font1: 'Poppins', sans-serif;
 
 
- //Description line height
- $lh-p: 28px; //28px;
 
  //  transition
 $transition: all ease 0.3s;
