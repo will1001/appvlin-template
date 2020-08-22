@@ -77,7 +77,7 @@
         @include breakpoint(tablet){
             width: 200px;
         }
-        h1{
+        h2{
             font-size: 48px;
             font-weight: bold;
             @include breakpoint(tablet){
@@ -274,7 +274,7 @@
         font-size: 24px;
         letter-spacing: 0.12em;
     }
-    h1{
+    h2{
         font-size: 48px;
         color:$primary-color;
         letter-spacing: 0.05em;

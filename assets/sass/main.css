@@ -129,13 +129,13 @@ p {
   }
 }
 
-.banner-1 .banner-content h1 {
+.banner-1 .banner-content h2 {
   font-size: 48px;
   font-weight: bold;
 }
 
 @media (min-width: 576px) and (max-width: 991px) {
-  .banner-1 .banner-content h1 {
+  .banner-1 .banner-content h2 {
     font-size: 35px;
   }
 }
@@ -408,7 +408,7 @@ p {
   letter-spacing: 0.12em;
 }
 
-.subscription h1 {
+.subscription h2 {
   font-size: 48px;
   color: #C266BB;
   letter-spacing: 0.05em;
