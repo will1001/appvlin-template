@@ -92,7 +92,7 @@ p {
 
 @media (min-width: 0px) and (max-width: 575px) {
   .banner-1 .bg-img img {
-    height: 210%;
+    height: 66em;
   }
 }
 
@@ -123,6 +123,14 @@ p {
   color: #ffffff;
 }
 
+@media (min-width: 0px) and (max-width: 575px) {
+  .banner-1 .banner-content {
+    width: 200px;
+    margin-top: 15vh;
+    margin-left: 5vw;
+  }
+}
+
 @media (min-width: 576px) and (max-width: 991px) {
   .banner-1 .banner-content {
     width: 200px;
@@ -134,6 +142,12 @@ p {
   font-weight: bold;
 }
 
+@media (min-width: 0px) and (max-width: 575px) {
+  .banner-1 .banner-content h2 {
+    font-size: 25px;
+  }
+}
+
 @media (min-width: 576px) and (max-width: 991px) {
   .banner-1 .banner-content h2 {
     font-size: 35px;
@@ -143,6 +157,12 @@ p {
 .banner-1 .banner-content p {
   font-size: 18px;
   color: #E5E5E5;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .banner-1 .banner-content p {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 991px) {
@@ -173,7 +193,7 @@ p {
 
 @media (min-width: 0px) and (max-width: 575px) {
   .banner-1 .banner-slider img {
-    margin-top: 60px;
+    margin-top: 40px;
     height: 590px;
     width: 280px;
   }
@@ -338,12 +358,11 @@ p {
   margin-top: 83px;
   padding: 20px 90px;
   width: 100%;
-  height: 130px;
 }
 
 @media (min-width: 0px) and (max-width: 575px) {
   .partner img {
-    padding: 25px 30px;
+    padding: 5vh 7vw;
   }
 }
 
@@ -389,13 +408,14 @@ p {
 
 @media (min-width: 0px) and (max-width: 575px) {
   .subscription {
-    padding: 20px;
+    padding: 0px;
   }
 }
 
 @media (min-width: 0px) and (max-width: 575px) {
   .subscription .subscribe-img {
     width: 100%;
+    margin: 10px;
   }
 }
 
@@ -465,39 +485,44 @@ p {
 
 @media (min-width: 0px) and (max-width: 575px) {
   .subscription input[type=text]::-webkit-input-placeholder {
-    font-size: 17px;
+    font-size: 12px;
   }
   .subscription input[type=text]:-ms-input-placeholder {
-    font-size: 17px;
+    font-size: 12px;
   }
   .subscription input[type=text]::-ms-input-placeholder {
-    font-size: 17px;
+    font-size: 12px;
   }
   .subscription input[type=text]::placeholder {
-    font-size: 17px;
+    font-size: 12px;
   }
 }
 
-.subscription a {
+.subscription .subscribe-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.subscription .subscribe-form a {
   background-color: #C266BB;
   color: #ffffff;
   border-radius: 100px;
   padding: 10px 30px;
   text-decoration: none;
   position: absolute;
-  right: 30px;
-  top: 213px;
+  right: 40px;
+  margin-top: 20px;
+}
+
+.subscription .subscribe-form a:after {
+  content: "Subscribe";
 }
 
 @media (min-width: 0px) and (max-width: 575px) {
-  .subscription a {
-    top: 291px;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 991px) {
-  .subscription a {
-    top: 185px;
+  .subscription .subscribe-form a:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0f3";
   }
 }
 
@@ -527,7 +552,11 @@ p {
 
 @media (min-width: 0px) and (max-width: 575px) {
   .pricing .icon {
-    margin: 50px;
+    margin: 11vh 0px;
+    margin-right: auto;
+    width: 75px;
+    height: 75px;
+    padding: 25px;
   }
 }
 
@@ -542,15 +571,22 @@ p {
   height: 44px;
 }
 
+@media (min-width: 0px) and (max-width: 575px) {
+  .pricing .icon img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
 .pricing .price-box {
   border: 1px solid #C266BB;
   height: 536px;
-  width: 328px;
+  width: 100%;
 }
 
 @media (min-width: 0px) and (max-width: 575px) {
   .pricing .price-box {
-    margin: 50px;
+    margin: 10vh 0px;
   }
 }
 
@@ -592,6 +628,23 @@ p {
   padding: 10px 30px;
   text-decoration: none;
   margin-left: 86px;
+}
+
+.pricing .price-box a:after {
+  content: "Subscribe";
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .pricing .price-box a:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0f3";
+  }
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  .pricing .price-box a {
+    margin-left: 17vw;
+  }
 }
 
 .faq {
@@ -869,6 +922,7 @@ p {
 @media (min-width: 0px) and (max-width: 575px) {
   .security .content {
     margin: 10px;
+    padding-top: 16px;
   }
 }
 
