@@ -12,15 +12,7 @@
     background-color: $primary-color;
     color: $white-color;
     border-radius: 100px;
-    padding: 10px 30px;
     text-decoration: none;
-    &:after{
-        content: "Subscribe";
-        @include breakpoint(phone){
-            font-family: "Font Awesome 5 Free";
-            content: "\f0f3";
-        }
-    }
 }
 
 @mixin outline-button(){
@@ -39,99 +31,56 @@
     background-color: white;
 }
 
-//animation
-
-@mixin slideInDown-anim() {
-    -webkit-animation-name: slideInDown;
-    animation-name: slideInDown;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+//opacity transition 
+@mixin opacity-transition {
+    -moz-transition: opacity 0.6s ease-in-out;
+    -webkit-transition: opacity 0.6s ease-in-out;
+    -o-transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
 }
 
-@-webkit-keyframes slideInDown {
-  0% {
-      transform: translateY(-100%);
-      visibility: visible;
-      -webkit-transform: translateY(-100%);
-  }
-  100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    }
+//  transform property
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
 }
-@keyframes slideInDown {
-  0% {
-      -webkit-transform: translateY(-100%);
-      transform: translateY(-100%);
-      visibility: visible;
-    }
-  100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-    } 
+
+//  animation apply
+@mixin animation($property,$time) {
+    -webkit-animation: $property $time linear infinite;
+    -moz-animation: $property $time linear infinite;
+    -ms-animation: $property $time linear infinite;
+    -o-animation: $property $time linear infinite;
+    animation: $property $time linear infinite;
 }
+
+
     
 
 @mixin breakpoint($point) {
-    @if $point==sm {
-        @media (min-width: 576px) {
-            @content ;
-        }
-    }
-    @else if $point==max-sm {
-        @media (max-width: 575px) {
-            @content ;
-        }
-    }
-    @else if $point==md {
-        @media (min-width: 768px) {
-            @content ;
-        }
-    }
-    @else if $point==max-md {
-        @media (max-width: 767px) {
-            @content ;
-        }
-    }
-    @else if $point==lg {
-        @media (min-width: 992px) {
-            @content ;
-        }
-    }
-    @else if $point==max-lg {
-        @media (max-width: 991px) {
-            @content ;
-        }
-    }
-    @else if $point==xl {
-        @media (min-width: 1200px) {
-            @content ;
-        }
-    }
-    @else if $point==max-xl {
-        @media (max-width: 1199px) {
-            @content ;
-        }
-    }
-    @else if $point==xxl {
-        @media (min-width: 1400px) {
-            @content ;
-        }
-    }
-    @else if $point==max-xxl {
-        @media (max-width: 1399px) {
-            @content ;
-        }
-    }
-    @else if $point==phone {
+    @if $point==phone {
         @media (min-width: 0px) and (max-width: 575px) {
             @content ;
         }
     }
     @else if $point==tablet {
-        @media (min-width: 576px) and (max-width: 991px) {
+        @media (min-width: 576px) and (max-width: 1024px) {
+            @content ;
+        }
+    }
+    @else if $point==ipad-pro {
+        @media (width: 1024px) {
+            @content ;
+        }
+    }
+    @else if $point==laptop {
+        @media (min-width: 1440px) and (max-width: 1536px) {
+            @content ;
+        }
+    }
+    @else if $point=desktop{
+        @media (min-width: 1537px) and (max-width: 1920px) {
             @content ;
         }
     }

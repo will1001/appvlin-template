@@ -1,36 +1,116 @@
 
-@import '_abstracts/_mixins';
 @import '_abstracts/_variables';
+@import '_abstracts/_mixins';
+@import '_abstracts/_animations';
 @import '_base/_typography';
 
 
 
 
+.opa-1{
+    opacity: 1;
+}
+
+.opa-0-phone{
+    @include breakpoint(phone){
+        opacity: 0;
+    }
+}
+
+.d-none{
+    display: none;
+}
+
+.d-block{
+    display: block;
+}
 
 //header section
 .header-section{
-    position: absolute;
-    z-index: 999;
-    width: 100%;
     .header-wrapper{
         display: flex;
-        justify-content: space-between;
-        .logo{
-            padding: 31px 0px;
+        align-items: center;
+        @include breakpoint(phone){
+            justify-content: space-between;
+            margin-top: 31px;
         }
-        .menu{
-            margin-top: 33px;
+        .logo{
+            margin-left: 5em;
             @include breakpoint(phone){
-                display: none;
+                margin-left: 5px;
+            }
+        }
+        .burger-button{
+            display: none;
+            @include breakpoint(phone){
+                display: block;
+                i{
+                    color: white;
+                    font-size: 31px
+                }
+            }
+         }
+         .overlay-layer{
+             position: absolute;
+             left: 0;
+             top: 0;
+             background-color: black;
+             opacity: 0.5;
+             width: 100%;
+             height: 100%;
+             z-index: 2;
+         }
+        .menu{
+            margin-left: 21vw;
+            margin-top: 33px;
+            z-index: 99999;
+            transition: 1s ease;
+            @include breakpoint(phone){
+                background-color: white;
+                position: absolute;
+                margin: 9em 0;
+                left: 0;
+                width: 100%;
+            }
+            @include breakpoint(laptop){
+                margin-left: 23vw;
+            }
+            @include breakpoint(desktop){
+                margin-left: 25vw;
             }
             ul{
                 display: flex;
+                align-items: center;
+                @include breakpoint(phone){
+                    display: inline;
+                }
                 li{
                     list-style: none;
                     margin-right: 18px;
                     color: $primary-color;
+                    @include breakpoint(phone){
+                        margin: 10px;
+                        border-bottom: 1px solid $primary-color;
+                    }
                     &:nth-child(5){
-                        margin-right: 280px;
+                        margin-right: 90%;
+                        @include breakpoint(phone){
+                            margin-right: 10px;
+                        }
+                    }
+                    &:nth-child(6){
+                        .select-lang{
+                           border: none;
+                            .list{
+                                display: block;
+                            }
+                            &::after{
+                                border-color: $primary-color;
+                            }
+                        }
+                        @include breakpoint(phone){
+                            border: none;
+                        }
                     }
                 }
             }
@@ -45,10 +125,14 @@
         img{
             position: absolute;
             top: 0;
-            height: 100%;
+            height: 43em;
             width:100%;
+            z-index: -1;
             @include breakpoint(phone){
                 height: 66em;
+            }
+            @include breakpoint(tablet){
+                height: 41em;
             }
         }
     }
@@ -63,8 +147,8 @@
         img{
             top: 0;
             right: 0;
-            width: 60%;
-            height: 85%;
+            width: 65%;
+            height: 37em;
             position: absolute;
         }
     }
@@ -76,11 +160,12 @@
         color: $white-color;
         @include breakpoint(phone){
             width: 200px;
-            margin-top: 15vh;
+            margin-top: 5vh;
             margin-left: 5vw;
         }
         @include breakpoint(tablet){
             width: 200px;
+            margin-left: 5vw;
         }
         h2{
             font-size: 48px;
@@ -111,9 +196,8 @@
     .banner-slider{
         img{
             display: flex;
-            height: 650px;
+            height: 670px;
             width: 333px;
-            margin-top: 50px;
             margin-left: auto;
             margin-right: auto;
             @include breakpoint(phone){
@@ -122,8 +206,9 @@
                 width: 280px;
             }
             @include breakpoint(tablet){
-                width: 100%;
-                margin-top: 0px;
+                width: 18em;
+                height: 600px;
+                margin-top: 5vh;
             }
         }
     }
@@ -164,16 +249,36 @@
             text-decoration: none;
             padding-left: 10px;
             margin: 10px;
+            &::before {
+                content: "";
+                opacity: 0;
+                left: 25px;
+                width: 321px;
+                height: 77px;
+                @include bg-setup("../images/button-bg.png");
+                @include opacity-transition();
+                position: absolute;
+                @include breakpoint(phone){
+                    display: none;
+                }
+            }
             @include breakpoint(phone){
-                @include responsive-banner-slider-button()
+                @include responsive-banner-slider-button();
             }
             @include breakpoint(tablet){
-                @include responsive-banner-slider-button()
+                @include responsive-banner-slider-button();
             }
-           
+            &:hover::before{
+                opacity: 1;
+            }
             &:hover{
-              @include bg-setup("../images/button-bg.png");
-                transition: 0.5s ease;
+                transition: 0.6s ease-in;
+                @include breakpoint(phone){
+                    background-color: $primary-color;
+                }
+                @include breakpoint(tablet){
+                    background-color: $primary-color;
+                }
                 .text{
                     color:$white-color;
                     h3{
@@ -230,16 +335,16 @@
     align-items: center;
     img{
         margin-right: 61.59px;
-        margin-top: 83px;
+        margin-top: 10px;
         padding: 20px 90px;
         width: 100%;
         // height: 130px;
         @include breakpoint(phone){
-            padding: 5vh 7vw;
+            padding: 4em 7vw;
         }
         @include breakpoint(tablet){
             padding: 25px 30px;
-            margin-top: 0px;
+            margin-top: 15px;
         }
     }
 }
@@ -250,19 +355,29 @@
 .app-screenshot{
     margin-top: 45.56px;
     img{
-        width: 202px;
-        height: 429px;
+        @include breakpoint(phone){
+            width: 100%;
+            margin-left: 10vw;
+        }
+        @include breakpoint(tablet){
+            width: 120%;
+        }
+        @include breakpoint(desktop){
+            margin: 47px;
+        }
     }
     .ss-group{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .center-ss{
-            img{
-                width: 288px;
-                height: 579px;
+        @include breakpoint(ipad-pro){
+            padding-left: 100px;
+        }
+        img{
+            &:hover{
+                transform: scale(1.2);
+                z-index: 999;
+                transition: 0.3s ease;
             }
-         }
+        }
+        
     }
     
 }
@@ -272,8 +387,16 @@
 
 .subscription{
     @include bg-setup("../images/subscribe-bg.svg");
+    padding-top: 50px;
+    padding-left: 5em;
+    @include breakpoint(tablet){
+
+    }
     @include breakpoint(phone){
         padding: 0px;
+    }
+    @include breakpoint(tablet){
+        padding-top: 20px;
     }
     .subscribe-img{
         @include breakpoint(phone){
@@ -302,14 +425,11 @@
     input[type=text]{
         border: 1px solid $primary-color;
         border-radius: 100px;
-        width: 550px;
+        width: 100%;
         height: 80px;
         padding: 28px;
         @include breakpoint(phone){
-            width: 100%;
-        }
-        @include breakpoint(tablet){
-            width: 100%;
+            height: 55px;
         }
         &::placeholder{
             color: $placeholder;
@@ -326,6 +446,12 @@
             position: absolute;
             right: 40px;
             margin-top:20px;
+            padding: 10px 30px;
+            @include breakpoint(phone){
+                margin-top:15px;
+                font-size: 12px;
+                padding: 5px 10px;
+            }
         }
     }
 }
@@ -345,51 +471,80 @@
    
     h2{
         margin-bottom: 100px;
-    }
-    .icon{
-        background-color: $primary-color;
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        padding: 30px;
-        position: absolute;
-        top: -50px;
-        left: 130px;
-        @include breakpoint(phone){
-            margin: 11vh 0px;
-            margin-right: auto;
-            width: 75px;
-            height: 75px;
-            padding: 25px;
-        }   
         @include breakpoint(tablet){
-            margin: 50px 180px;
-        }   
-        img{
-            width: 44px;
-            height: 44px;
-            @include breakpoint(phone){
-                width: 25px;
-                height: 25px;
-            }
+            margin-top: 100px;
+            margin-bottom: 80px;
         }
     }
+    
+    .icon{
+            background-color: $primary-color;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            padding: 30px;
+            position: absolute;
+            margin-left: 9.5em;
+            z-index: 1;
+            top: -50px;
+            @include breakpoint(phone){
+                top: 0;
+                margin: 4vh 33vw;
+                width: 75px;
+                height: 75px;
+                padding: 25px;
+            }   
+            @include breakpoint(tablet){
+                top: 0;
+                margin-left: 40vw;
+            }   
+            @include breakpoint(ipad-pro){
+                margin-left: 43vw;
+            }   
+            @include breakpoint(desktop){
+                margin-left: 13vw;
+            }   
+            img{
+                width: 44px;
+                height: 44px;
+                @include breakpoint(phone){
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+    }
+
     .price-box{
         border: 1px solid $primary-color;
         height: 536px;
         width: 100%;
+        margin: 0 auto;
          @include breakpoint(phone){
             margin: 10vh 0px;
         }   
          @include breakpoint(tablet){
             margin: 50px auto;
+            width: 450px;
+            height: 560px;
         }   
+        @include breakpoint(ipad-pro){
+            width: 55%;
+            height: 580px;
+        }
+        @include breakpoint(desktop){
+            width: 500px;
+            height: 580px;
+        }
         h2,h3{
             text-align: center;
         }
         h2{
             padding-top: 75px;
             font-weight: bold;
+            @include breakpoint(tablet){
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
         }
         h3{
             margin-top:32px;
@@ -398,7 +553,7 @@
 
         ul{
             margin-top:40px;
-            margin-bottom:64px;
+            margin-bottom:5vh;
             li{
                 font-size: 18px;
                 line-height: 40px;
@@ -407,9 +562,20 @@
         }
         a{
             @include button1();
-            margin-left:86px;
+            margin-left: 7em;
+            padding: 10px 30px;
             @include breakpoint(phone){
-                margin-left:17vw;
+                margin-left: 23vw;
+                padding: 10px 20px;
+            }
+            @include breakpoint(tablet){
+                margin-left: 9em;
+            }
+            @include breakpoint(ipad-pro){
+                margin-left: 11em;
+            }
+            @include breakpoint(desktop){
+                margin-left: 10em;
             }
         }
     }
@@ -421,6 +587,9 @@
 .faq{
     margin-top: 70px;
     padding: 56px;
+    @include breakpoint(phone){
+        padding: 10px;
+    }  
     .faq-img{
         @include breakpoint(phone){
             width: 100%;
@@ -445,8 +614,12 @@
             transition: 0.5s ease;
             @include breakpoint(phone){
                 width: 100%;
+                font-size: 14px;
             }   
             @include breakpoint(tablet){
+                width: 100%;
+            }   
+            @include breakpoint(desktop){
                 width: 100%;
             }   
             &:hover{
@@ -486,6 +659,15 @@
             border-radius: 33px;
             box-shadow: 12px 9px 4px rgba(0, 0, 0, 0.25);
             transition: 0.5s ease;
+            @include breakpoint(tablet){
+                width: 638px;
+            }
+            @include breakpoint(ipad-pro){
+                width: 440px;
+            }
+            @include breakpoint(desktop){
+                width: 100%;
+            }
 
         }
         
@@ -497,10 +679,13 @@
             box-shadow: none;
             transition: 0.5s ease;
             @include breakpoint(phone){
-                width: 93%;
+                width: 91%;
             }   
             @include breakpoint(tablet){
                 width: 95%;
+            }   
+            @include breakpoint(desktop){
+                width: 100%;
             }   
         }
         a{
@@ -514,7 +699,7 @@
         .content{
             display: block;
             transition: 0.5s ease;
-            @include breakpoint(sm){
+            @include breakpoint(phone){
                 width: 100%;
             }  
 
@@ -530,7 +715,7 @@
     padding: 51px 70px;
     color:$white-color;
     @include breakpoint(phone){
-        padding: 20px;
+        padding: 30px;
     }
     .footer-logo{
         img{
@@ -551,6 +736,9 @@
     .usefull-link{
         h1{
         font-size: 36px;
+        @include breakpoint(tablet){
+            font-size: 29px;
+        }
         }
         ul{
             li{
@@ -561,6 +749,11 @@
     
 
     .contact{
+        h1{
+            @include breakpoint(tablet){
+            font-size: 29px;
+        }
+        }
         i{
             font-size: 12px;
         }
@@ -587,6 +780,9 @@
     .app-download{
         display: flex;
         margin-top: 47px;
+        @include breakpoint(phone){
+            display: block;
+        }
         a{
             display: flex;
             align-items: center;
@@ -598,6 +794,9 @@
             margin-right: 19px;
             text-decoration: none;
             background-color: $google-play;
+            @include breakpoint(phone){
+                margin-top: 10px;
+            }
             &:nth-child(2){
                 background-color: $app-store;
             }
@@ -628,15 +827,47 @@
 // Security Section
 
 .security{
-    img{
+    .illustration{
         margin: 30px;
+        width: 90%;
         @include breakpoint(phone){
-            width: 90%;
             margin: 10px;
         }
         @include breakpoint(tablet){
-            width: 90%;
             margin: 20px;
+        }
+        @include breakpoint(desktop){
+            margin: 50px;
+        }
+    }
+    .box-animation{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 90px;
+        z-index: -1;
+        @include animation(rotating,10s);
+        @include breakpoint(phone){
+            top:-34px;
+            padding: 60px;
+        }
+        @include breakpoint(laptop){
+            top:-85px;
+            padding: 120px;
+        }
+        
+    }
+    .ball-slice{
+        position: absolute;
+        top: -52px;
+        right: 92px;
+        width: 305px;
+        height: 305px;
+        @include animation(blur,3s);
+        @include breakpoint(phone){
+            top: 0;
+            right: 0;
         }
     }
     .content{
@@ -646,7 +877,6 @@
             padding-top: 16px;
         }
         @include breakpoint(tablet){
-            margin: 10px;
         }
         h5{
             font-size: 24px;
@@ -672,6 +902,8 @@
 
 }
 
+
+// feature section
 .feature{
     .illustration{
         padding: 45px 66px;
@@ -680,7 +912,37 @@
                 width: 100%;
             }
             @include breakpoint(tablet){
-                width: 100%;
+                width: 90%;
+            }
+        }
+        .slice-ball-1{
+            position: absolute;
+            width: 101px;
+            top: 0;
+            left: 0;
+            @include animation(horizontal-translate,10s);
+            @include breakpoint(phone){
+                left: 90%;
+            }
+        }
+        .slice-ball-2{
+            position: absolute;
+            width: 305px;
+            bottom: 0;
+            right: 0;
+            margin: 2em 17em;
+            z-index: -1;
+            @include breakpoint(phone){
+                width: 206px;
+                margin: 0em 5em;
+            }
+            @include breakpoint(tablet){
+                width: 506px;
+                margin: 0em 14em;
+            }
+            @include breakpoint(ipad-pro){
+                width: 306px;
+                margin: 0em 10em;
             }
         }
     }
@@ -691,10 +953,35 @@
             padding-left: 30px;
         }
         @include breakpoint(tablet){
-            padding-left: 30px;
+            padding: 10px  25px;
+        }
+        .grad-shape{
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 50px;
+            z-index: -1;
+            @include breakpoint(phone){
+                margin: 56px -36px;
+            }
+            @include breakpoint(tablet){
+                margin: -20px -27px;
+            }
+        }
+        .slice-ball{
+            position: absolute;
+            width: 101px;
+            right: 0;
+            bottom: 0;
+            margin: 110px;
+            @include animation(move-left,10s);
+            @include breakpoint(phone){
+                margin: 110px 0px;
+            }
         }
          h5{
             font-size: 24px;
+            font-weight: bold;
             line-height: 112%;
             letter-spacing: 0.12em;
         }
@@ -742,6 +1029,9 @@
                  padding: 17px 77px;
                  text-decoration: none;
                  color: #5A4F4F;
+                 @include breakpoint(phone){
+                     padding: 5px 25px;
+                 }
             }
          }
     }

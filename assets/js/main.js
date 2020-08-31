@@ -1,7 +1,43 @@
-$('.button').click(function(e)
-{
+
+$('.button').click(function (e){
     e.preventDefault();
 });
+
+// burger-button phone view
+$('.burger-button').on('click', function (e) { 
+    var element = $('.menu');
+    var element2 = $('.burger-button i');
+    var element3 = $('.overlay-layer');
+    if (element.hasClass('opa-0-phone')) {
+        element.removeClass("opa-0-phone");
+        element.addClass("opa-1");
+        element2.removeClass("fa-bars");
+        element2.addClass("fa-times");
+        element3.removeClass("d-none");
+        element3.addClass("d-block");
+    } else {
+        element.addClass("opa-0-phone");
+        element.removeClass("opa-1");
+        element2.removeClass("fa-times");
+        element2.addClass("fa-bars");
+        element3.removeClass("d-block");
+        element3.addClass("d-none");
+    }   
+})
+
+
+// overlay layer click
+$('.overlay-layer').on('click', function (e) { 
+    var element = $('.menu');
+    var element2 = $('.burger-button i');
+    var element3 = $('.overlay-layer');
+        element.removeClass("opa-1");
+        element.addClass("opa-0-phone");
+        element2.removeClass("fa-times");
+        element2.addClass("fa-bars");
+        element3.removeClass("d-block");
+        element3.addClass("d-none");
+})
 
 if ($('.banner-slider').length) {
       $('.banner-slider').owlCarousel({
@@ -75,12 +111,12 @@ $('.ss-group').owlCarousel({
         animateIn: 'Slide',
           responsive:{
           0:{
-              items:2,
+              items:1,
           },
           575:{
               items:3,
           },
-          992:{
+          1025:{
               items:5,
           }
       }
@@ -101,3 +137,9 @@ $('.faq .accordion-button .title').on('click', function (e) {
     // }
 })
 
+
+
+// Nice Select
+$(document).ready(function() {
+  $('.select-lang').niceSelect();
+});

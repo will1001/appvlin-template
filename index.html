@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./assets/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/animate.css">
     <link rel="stylesheet" href="./assets/css/owl.min.css">
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
     <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
     <link rel="stylesheet" href="./assets/css/magnific-popup.css">
     <link rel="stylesheet" href="./assets/sass/main.css">
@@ -40,21 +41,34 @@
 
     <!--============= Header Section Starts Here =============-->
     <header class="header-section">
-        <div class="container">
+        <div class="container-fluid">
             <div class="header-wrapper">
                 <div class="logo">
                     <a href="">
                         <img src="./assets/images/logo.png" alt="">
                     </a>
                 </div>
-                <div class="menu">
+                 <!-- Menu Start on Phone View -->
+                <div class="burger-button">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="overlay-layer d-none"></div>
+                <div class="menu opa-0-phone">
                    <ul>
                        <li>Home</li>
                        <li>About</li>
                        <li>Pricing</li>
                        <li>Blog</li>
                        <li>Contact</li>
-                       <li>en V</li>
+                       <li>
+                           <select class="select-lang">
+                               <option value="">EN</option>
+                               <option value="" >JP</option>
+                               <option value="" >EU</option>
+                               <option value="" >CN</option>
+                           </select>
+                           <!-- <img src="./assets/images/arrow2.svg" alt=""> -->
+                        </li>
                    </ul>
                 </div>
             </div>
@@ -73,19 +87,19 @@
             <img src="./assets/images/banner-shape.png" alt="">
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-5">
+            <div class="col-xl-4 col-lg-4 col-md-5">
                 <div class="banner-content">
                    <h2>All The Conveniences in One App</h2>
                     <p>One App can do all of your task and save your times</p>
                     <a class="button" href="#">Get Trial</a>
                 </div>  
             </div>
-            <div class="col-lg-4 col-md-5 banner-slider owl-carousel">
+            <div class="col-xl-4 col-lg-6 col-md-5 banner-slider owl-carousel">
                 <img src="./assets/images/Banner-phone-1.png" alt="">
                 <img src="./assets/images/Banner-phone-2.png" alt="">
                 <img src="./assets/images/Banner-phone-3.png" alt="">
             </div>
-            <div class="col-lg-4 col-md-2">
+            <div class="col-xl-4 col-lg-2 col-md-2">
                 <div class="slider-button-group">
                     <a href="#" class="icon-button button active">
                         <div class="icon">
@@ -167,7 +181,7 @@
 
     <!--============= Partner Section Starts Here =============-->
     <div class="partner owl-carousel">
-        <!-- <div class="container"> -->
+        <!-- <div class="container-fluid"> -->
             <img src="./assets/images/partner1.png" alt="">
             <img src="./assets/images/partner1.png" alt="">
             <img src="./assets/images/partner1.png" alt="">
@@ -179,7 +193,7 @@
 
     <!--============= Subscribe Feature Section Section starts Here =============-->
         <section class="subscription">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6">
                         <h5>Get Update</h5>
@@ -189,7 +203,7 @@
                             </div>
                         <div class="subscribe-form">
                             <input type="text" placeholder="Enter Your Email">
-                            <a href="#" class="button"></a>
+                            <a href="#" class="button">Subscribe</a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -205,7 +219,8 @@
     <section class="security">
         <div class="row">
             <div class="col-lg-6">
-                <img src="./assets/images/security-illustration.png" alt="img">
+                <img class="illustration" src="./assets/images/security-illustration.png" alt="img">
+                <img class="box-animation" src="./assets/images/bg-anim.png" alt="">
             </div>
             <div class="col-lg-6 content">
                 <h5>Security</h5>
@@ -216,6 +231,7 @@
                     <li>DDoS protection</li>
                     <li>Data Protection</li>
                 </ul>
+                <img class="ball-slice" src="./assets/images/ball_slice.svg" alt="">
             </div>
         </div>
     </section>
@@ -247,6 +263,8 @@
         <section class="feature">
             <div class="row">
                 <div class="col-lg-6 content">
+                    <img class="grad-shape" src="./assets/images/ball-gradient.svg" alt="">
+                    <img class="slice-ball" src="./assets/images/ball_slice.svg" alt="">
                     <h5>Feature</h5>
                     <h2>Incredible Feature For Boosting Your Businness</h2>
                     <ul>
@@ -304,6 +322,8 @@
 
                 </div>
                 <div class="col-lg-6 illustration">
+                    <img class="slice-ball-1" src="./assets/images/ball_slice.svg" alt="">
+                    <img class="slice-ball-2" src="./assets/images/ball_slice.svg" alt="">
                     <img src="./assets/images/Feature_illustration_.png" alt="img">
                 </div>
             </div>
@@ -321,14 +341,14 @@
 
     <!--============= Pricing Section Section Starts Here =============-->
         <section class="pricing">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <h2>Pricing</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-xl-4 col-lg-12">
                         <div class="icon">
                             <img src="./assets/images/pricing-icon1.svg" alt="">
                         </div>
@@ -344,7 +364,7 @@
                             <a href="#" class="button">Choose Plan</a>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-xl-4 col-lg-12">
                          <div class="icon">
                             <img src="./assets/images/pricing-icon2.svg" alt="">
                         </div>
@@ -360,7 +380,7 @@
                             <a href="#" class="button">Choose Plan</a>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-xl-4 col-lg-12">
                          <div class="icon">
                             <img src="./assets/images/pricing-icon3.svg" alt="">
                         </div>
@@ -384,7 +404,7 @@
 
     <!--============= App Screenshot Section Section Starts Here =============-->
     <section class="app-screenshot">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>App Screenshot</h2>
@@ -420,20 +440,7 @@
                     </div>
                     <div class="col-lg-6">
                         <h2>FAQ</h2>
-                        <div class="accordion-button">
-                            <div class="title">
-                                <span>Which License Do I Need?</span>
-                                <a href="#" class="button">
-                                    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.423416 0.340088L0.294434 0.474636L1.67847 1.9184L9.65767 10.2419L11.0417 11.6857L12.4257 10.2419L20.4049 1.9184L21.789 0.474636L21.66 0.340088H18.8919L19.0209 0.474636L11.0417 8.79815L3.06251 0.474636L3.19149 0.340088H0.423416Z" fill="white"/>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="content">
-                                <p>If you want to receive monthly updates from us just pop your email in the box. You can unsubscribe at any time. Your privacy & personal information will be treated.</p>
-                            </div>
-                        </div>
-                        <div class="accordion-button">
+                        <div class="accordion-button open">
                             <div class="title">
                                 <span>Which License Do I Need?</span>
                                 <a href="#" class="button">
@@ -498,7 +505,7 @@
     <!--============= Footer Section Starts Here =============-->
     <footer class="footer">
         <div class="row">
-            <div class="col-lg-2 col-md-4 footer-logo">
+            <div class="col-xl-2 col-lg-4 col-md-4 footer-logo">
                 <img src="./assets/images/logo.png" alt="">
             </div>
             <div class="col-lg-3 col-md-4 usefull-link">
@@ -510,7 +517,7 @@
                     <li>Terms & Condition</li>
                 </ul>
             </div>
-            <div class="col-lg-3 col-md-4 contact">
+            <div class="col-xl-3 col-lg-4 col-md-4 contact">
                 <h1>Contact:</h1>
                 <ul>
                     <li>
@@ -527,7 +534,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-4 col-md-12">
+            <div class="col-xl-4 col-lg-12 col-md-12">
                 <div class="social-media-link">
                     <i class="fab fa-twitter"></i>
                     <i class="fab fa-instagram"></i>
@@ -554,7 +561,7 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-xl-12 col-lg-12 text-center">
                 © copyright 2020 by Appvlin
             </div>
         </div>
@@ -566,6 +573,7 @@
     <script src="./assets/js/magnific-popup.min.js"></script>
     <script src="./assets/js/jquery-ui.min.js"></script>
     <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/nice-select.js"></script>
     <script src="./assets/js/owl.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
