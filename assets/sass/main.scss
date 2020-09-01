@@ -68,6 +68,43 @@
 }
 
 
+.scrollToTop {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    color: #ffffff;
+    z-index: 999;
+    top: 400px;
+    right: 30px;
+    position: fixed;
+    border-radius: 5px;
+    -webkit-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    transform: translateY(100px);
+    background: darken($primary-color,10%);
+    text-align: center;
+    font-size: 16px;
+    visibility: hidden;
+}
+
+// .scrollToTop:hover {
+//     color: #ffffff;
+// }
+
+.scrollToTop.active {
+    -webkit-transform: translateY(100);
+    -ms-transform: translateY(100);
+    transform: translateY(100);
+    animation: bounceInDown 2s;
+    -webkit-animation: bounceInDown 2s;
+    -moz-animation: bounceInDown 2s;
+    visibility: visible;
+}
+
+// .scrollToTop img {
+//     width: 100%;
+// }
+
 
 //header section
 .header-section{
