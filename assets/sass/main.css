@@ -110,6 +110,52 @@
   }
 }
 
+@-webkit-keyframes side-rotating {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 1, 0, 360deg);
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@keyframes side-rotating {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 1, 0, 360deg);
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@keyframes preloader-fx {
+  0% {
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(2, 2);
+    transform: scale(2, 2);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes preloader-fx {
+  0% {
+    -webkit-transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(2, 2);
+    opacity: 0;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -142,6 +188,49 @@ p {
 
 .d-block {
   display: block;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: #662962;
+  overflow: hidden;
+}
+
+.preloader-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.preloader-icon span {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #8b3784;
+  -webkit-animation: preloader-fx 1.6s linear infinite;
+  animation: preloader-fx 1.6s linear infinite;
+}
+
+.preloader-icon span:nth-child(2) {
+  animation-delay: -0.8s;
+  -webkit-animation-delay: -0.8s;
+  background: #C266BB;
+}
+
+.preloader-icon img {
+  width: 50px;
+  height: 50px;
+  -webkit-animation: side-rotating 7s linear infinite;
+  animation: side-rotating 7s linear infinite;
 }
 
 .header-section .header-wrapper {
@@ -200,7 +289,7 @@ p {
 .header-section .header-wrapper .menu {
   margin-left: 21vw;
   margin-top: 33px;
-  z-index: 99999;
+  z-index: 100;
   -webkit-transition: 1s ease;
   transition: 1s ease;
 }
@@ -325,8 +414,8 @@ p {
 
 .banner-1 .banner-content {
   width: 361px;
-  margin-top: 218px;
-  margin-left: 92px;
+  margin-top: 100px;
+  margin-left: 90px;
   color: #ffffff;
 }
 
@@ -415,7 +504,7 @@ p {
 }
 
 .banner-1 .slider-button-group {
-  margin-top: 222px;
+  margin-top: 120px;
 }
 
 @media (min-width: 0px) and (max-width: 575px) {

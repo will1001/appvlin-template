@@ -143,3 +143,15 @@ $('.faq .accordion-button .title').on('click', function (e) {
 $(document).ready(function() {
   $('.select-lang').niceSelect();
 });
+
+
+// counter animation
+$('.app-statistic h3').countUp({
+      'time': 1500,
+      'delay': 10
+});
+
+// Preloader Js
+  $(window).on('load', function () {
+    $('.preloader').fadeOut(1000);
+  });
