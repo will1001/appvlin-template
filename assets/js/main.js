@@ -1,23 +1,22 @@
 
-$('.button').click(function (e){
-    e.preventDefault();
-});
 
 // burger-button phone view
 $('.burger-button').on('click', function (e) { 
     var element = $('.menu');
     var element2 = $('.burger-button i');
     var element3 = $('.overlay-layer');
-    if (element.hasClass('opa-0-phone')) {
-        element.removeClass("opa-0-phone");
-        element.addClass("opa-1");
+    console.log("test")
+  
+    if (element.hasClass('hide')) {
+        element.removeClass("hide");
+        element.addClass("show");
         element2.removeClass("fa-bars");
         element2.addClass("fa-times");
         element3.removeClass("d-none");
         element3.addClass("d-block");
     } else {
-        element.addClass("opa-0-phone");
-        element.removeClass("opa-1");
+        element.addClass("hide");
+        element.removeClass("show");
         element2.removeClass("fa-times");
         element2.addClass("fa-bars");
         element3.removeClass("d-block");
@@ -31,8 +30,21 @@ $('.overlay-layer').on('click', function (e) {
     var element = $('.menu');
     var element2 = $('.burger-button i');
     var element3 = $('.overlay-layer');
-        element.removeClass("opa-1");
-        element.addClass("opa-0-phone");
+        element.removeClass("show");
+        element.addClass("hide");
+        element2.removeClass("fa-times");
+        element2.addClass("fa-bars");
+        element3.removeClass("d-block");
+        element3.addClass("d-none");
+})
+
+// list menu click
+$('.menu li a').on('click', function (e) { 
+    var element = $('.menu');
+    var element2 = $('.burger-button i');
+    var element3 = $('.overlay-layer');
+        element.removeClass("show");
+        element.addClass("hide");
         element2.removeClass("fa-times");
         element2.addClass("fa-bars");
         element3.removeClass("d-block");
@@ -77,29 +89,6 @@ for (let i = 0; i < button.length; i++) {
 }
     
 
-$('.partner').owlCarousel({
-      loop: true,
-      margin: 0,
-      responsiveClass: true,
-      nav: false,
-      dots: false,
-      autoplay: true,
-      autoplayTimeout: 1000,
-      autoplayHoverPause: true,
-      slideTransition:'linear',
-      responsive:{
-          0:{
-              items:3,
-          },
-          480:{
-              items:3,
-          },
-          768:{
-              items:5,
-          }
-      }
-})
-
 $('.ss-group').owlCarousel({
       loop: true,
       margin: 0,
@@ -124,17 +113,9 @@ $('.ss-group').owlCarousel({
 
 // faq
 
-$('.faq .accordion-button .title').on('click', function (e) { 
-    var element = $(this).parent('.faq .accordion-button');
+$('#faq .accordion-button .title').on('click', function (e) { 
+    var element = $(this).parent('#faq .accordion-button');
     element.hasClass('open') ? element.removeClass("open") : element.addClass("open")
-    // // element.hasClass('open') ? element.find('.content').slideUp(300, "swing") : element.find('.content').slideDown(300, "swing")
-    // if (element.hasClass('open')) {
-    //     element.removeClass("open")
-    //     element.find('.content').slideUp(300, "swing")
-    // } else {
-    //     element.addClass("open")
-    //     element.find('.content').slideDown(300, "swing")
-    // }
 })
 
 
@@ -146,7 +127,7 @@ $(document).ready(function() {
 
 
 // counter animation
-$('.app-statistic h3').countUp({
+$('#app-statistic h3').countUp({
       'time': 1500,
       'delay': 10
 });

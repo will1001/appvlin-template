@@ -45,8 +45,9 @@
         <div class="container-fluid">
             <div class="header-wrapper">
                 <div class="logo">
-                    <a href="">
-                        <img src="./assets/images/logo.png" alt="">
+                    <a href="#">
+                        <img src="./assets/images/logo-preload.svg" alt="">
+                        <span>Appvlin</span>
                     </a>
                 </div>
                  <!-- Menu Start on Phone View -->
@@ -54,13 +55,15 @@
                     <i class="fas fa-bars"></i>
                 </div>
                 <div class="overlay-layer d-none"></div>
-                <div class="menu opa-0-phone">
+                <div class="menu hide">
                    <ul>
-                       <li>Home</li>
-                       <li>About</li>
-                       <li>Pricing</li>
-                       <li>Blog</li>
-                       <li>Contact</li>
+                       <li><a href="#">Home</a></li>
+                       <li><a href="#subscription">Subscribe</a></li>
+                       <li><a href="#security">Security</a></li>
+                       <li><a href="#feature">Feature</a></li>
+                       <li><a href="#pricing">Pricing</a></li>
+                       <li><a href="#app-screenshot">Screenshot</a></li>
+                       <li><a href="#faq">FAQ</a></li>
                        <li>
                            <select class="select-lang">
                                <option value="">EN</option>
@@ -79,7 +82,7 @@
 
 
     <!--============= Banner Section Starts Here =============-->
-    <section class="banner-1">
+    <section id="banner-1">
         <div class="bg-img">
             <img src="./assets/images/bg.png" alt="">
             <div class="overlay-layer"></div>
@@ -92,7 +95,7 @@
                 <div class="banner-content">
                    <h2 class="wow slideInLeft" data-wow-duration="2s">All The Conveniences in One App</h2>
                     <p class="wow slideInLeft" data-wow-duration="2s">One App can do all of your task and save your times.Click Link for free trial.</p>
-                    <a class="button wow slideInLeft" data-wow-duration="2s" href="#">Get Trial</a>
+                    <a class="wow slideInLeft" data-wow-duration="2s" href="#">Get Trial</a>
                 </div>  
             </div>
             <div class="col-xl-4 col-lg-6 col-md-5 banner-slider owl-carousel">
@@ -102,7 +105,7 @@
             </div>
             <div class="col-xl-4 col-lg-2 col-md-2">
                 <div class="slider-button-group">
-                    <a href="#" class="icon-button button wow slideInRight active" data-wow-duration="1s">
+                    <a href="#" class="icon-button wow slideInRight active" data-wow-duration="1s">
                         <div class="icon">
                             <svg class="svg-icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M28.5938 0.937607H14.5312C14.4069 0.937607 14.2877 0.986993 14.1998 1.0749C14.1119 1.16281 14.0625 1.28204 14.0625 1.40636V7.50011H3.28125C2.65965 7.50011 2.06351 7.74704 1.62397 8.18658C1.18443 8.62611 0.9375 9.22226 0.9375 9.84386V22.0314C0.9375 22.653 1.18443 23.2491 1.62397 23.6886C2.06351 24.1282 2.65965 24.3751 3.28125 24.3751H8.90625V26.2501H8.4375C8.06488 26.2512 7.70784 26.3997 7.44436 26.6632C7.18088 26.9267 7.03236 27.2837 7.03125 27.6564V28.5939C7.03125 28.7182 7.08064 28.8374 7.16854 28.9253C7.25645 29.0132 7.37568 29.0626 7.5 29.0626H15.9375C16.0618 29.0626 16.181 29.0132 16.269 28.9253C16.3569 28.8374 16.4062 28.7182 16.4062 28.5939V27.6564C16.4051 27.2837 16.2566 26.9267 15.9931 26.6632C15.7297 26.3997 15.3726 26.2512 15 26.2501H14.5312V24.3751H20.1562C20.464 24.3751 20.7688 24.3145 21.0532 24.1967C21.3375 24.0789 21.5959 23.9063 21.8135 23.6886C22.0312 23.471 22.2038 23.2126 22.3216 22.9283C22.4394 22.6439 22.5 22.3391 22.5 22.0314V13.1251H28.5938C28.7181 13.1251 28.8373 13.0757 28.9252 12.9878C29.0131 12.8999 29.0625 12.7807 29.0625 12.6564V1.40636C29.0625 1.28204 29.0131 1.16281 28.9252 1.0749C28.8373 0.986993 28.7181 0.937607 28.5938 0.937607ZM15 27.1876C15.1243 27.1876 15.2435 27.237 15.3315 27.3249C15.4194 27.4128 15.4688 27.532 15.4688 27.6564V28.1251H7.96875V27.6564C7.96875 27.532 8.01814 27.4128 8.10604 27.3249C8.19395 27.237 8.31318 27.1876 8.4375 27.1876H15ZM9.84375 26.2501V24.3751H13.5938V26.2501H9.84375ZM21.5625 22.0314C21.5614 22.404 21.4129 22.761 21.1494 23.0245C20.8859 23.288 20.5289 23.4365 20.1562 23.4376H3.28125C2.90863 23.4365 2.55159 23.288 2.28811 23.0245C2.02463 22.761 1.87611 22.404 1.875 22.0314V21.5626H21.5625V22.0314ZM21.5625 20.6251H1.875V9.84386C1.87611 9.47124 2.02463 9.1142 2.28811 8.85072C2.55159 8.58723 2.90863 8.43872 3.28125 8.43761H14.0625V12.6564C14.0625 12.7807 14.1119 12.8999 14.1998 12.9878C14.2877 13.0757 14.4069 13.1251 14.5312 13.1251H21.5625V20.6251ZM28.125 12.1876H15V1.87511H28.125V12.1876Z" fill="#702077"/>
@@ -126,7 +129,7 @@
                             <p>Easy to manage your all data in one page</p>
                         </div>
                     </a>
-                    <a href="#" class="icon-button button wow slideInRight" data-wow-duration="2s">
+                    <a href="#" class="icon-button wow slideInRight" data-wow-duration="2s">
                          <div class="icon">
                             <svg class="svg-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6.39998 26.6667H5.33331V27.7333H6.39998V26.6667Z" fill="#702077"/>
@@ -148,7 +151,7 @@
                             <p>Fast Transaction is feature to manage and process yoor transacrion</p>
                         </div>
                     </a>
-                    <a href="#" class="icon-button button wow slideInRight" data-wow-duration="3s">
+                    <a href="#" class="icon-button wow slideInRight" data-wow-duration="3s">
                          <div class="icon">
                             <svg class="svg-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M22.8 14.4H21.6V13.2C21.6 11.2118 19.9882 9.60001 18 9.60001C16.0117 9.60001 14.4 11.2118 14.4 13.2V14.4H13.2C12.8686 14.4 12.6 14.6687 12.6 15V23.4C12.6 23.7314 12.8686 24 13.2 24H22.8C23.1313 24 23.4 23.7314 23.4 23.4V15C23.4 14.6687 23.1313 14.4 22.8 14.4ZM15.6 13.2C15.6 11.8745 16.6745 10.8 18 10.8C19.3255 10.8 20.4 11.8745 20.4 13.2V14.4H15.6V13.2ZM22.2 22.8H13.8V15.6H22.2V22.8Z" fill="#702077"/>
@@ -179,21 +182,8 @@
     </section>
     <!--============= Banner Section Ends Here =============-->
 
-
-    <!--============= Partner Section Starts Here =============-->
-    <div class="partner owl-carousel">
-        <!-- <div class="container-fluid"> -->
-            <img src="./assets/images/partner1.png" alt="">
-            <img src="./assets/images/partner1.png" alt="">
-            <img src="./assets/images/partner1.png" alt="">
-            <img src="./assets/images/partner1.png" alt="">
-            <img src="./assets/images/partner1.png" alt="">
-        <!-- </div> -->
-    </div>
-    <!--============= Partner Section Ends Here =============-->
-
     <!--============= Subscribe Feature Section Section starts Here =============-->
-        <section class="subscription">
+        <section id="subscription">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-6 content">
@@ -202,7 +192,7 @@
                         <p class="wow slideInRight" data-wow-duration="3s">If you want to receive monthly updates from us just pop your email in the box. You can unsubscribe at any time. Your privacy & personal information will be treated.</p>
                         <div class="subscribe-form">
                             <input type="text" placeholder="Enter Your Email">
-                            <a href="#" class="button">Subscribe</a>
+                            <a href="#0" class="button">Subscribe</a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -215,7 +205,7 @@
 
 
     <!--============= Security Section Section starts Here =============-->
-    <section class="security">
+    <section id="security">
         <div class="row">
             <div class="col-lg-6">
                 <img class="illustration" src="./assets/images/security-illustration.png" alt="img">
@@ -237,7 +227,7 @@
     <!--============= Security Section Section Ends Here =============-->
 
      <!--============= App Statistic Section Section Starts Here =============-->
-    <section class="app-statistic">
+    <section id="app-statistic">
             <div class="row">
                 <div class="col-lg-4 col-sm-4 text-center">
                     <img src="./assets/images/statistic-icon1.svg" alt="">
@@ -259,7 +249,7 @@
     <!--============= App Statistic Section Section Ends Here =============-->
 
     <!--============= Feature Section Section Starts Here =============-->
-        <section class="feature">
+        <section id="feature">
             <div class="row">
                 <div class="col-lg-6 content">
                     <img class="grad-shape wow bounceInLeft" data-wow-duration="3s" src="./assets/images/ball-gradient.svg" alt="">
@@ -288,7 +278,7 @@
                                     </defs>
                                     </svg>
                             </div>
-                            <p>If you want to receive monthly updates from us just pop your email in the box. </p>
+                            <p>Fast Transaction is feature to manage and process yoor transacrion. </p>
                         </li>
                         <li>
                             <div class="icon">
@@ -311,12 +301,12 @@
                                     </defs>
                                     </svg>
                             </div>
-                            <p>If you want to receive monthly updates from us just pop your email in the box. </p>
+                            <p>Easy to manage your all data in one page. </p>
                         </li>
                     </ul>
 
                     <div class="button">
-                        <a href="#">More</a>
+                        <a href="#0">More</a>
                     </div>
 
                 </div>
@@ -339,11 +329,11 @@
 
 
     <!--============= Pricing Section Section Starts Here =============-->
-        <section class="pricing">
+        <section id="pricing">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2>Pricing</h2>
+                        <h2 class="title">Pricing</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -360,7 +350,7 @@
                                 <li>Full licenses</li>
                                 <li>Free Updates</li>
                             </ul>
-                            <a href="#" class="button">Choose Plan</a>
+                            <a href="#0" class="button">Choose Plan</a>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-12">
@@ -376,7 +366,7 @@
                                 <li>Full licenses</li>
                                 <li>Free Updates</li>
                             </ul>
-                            <a href="#" class="button">Choose Plan</a>
+                            <a href="#0" class="button">Choose Plan</a>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-12">
@@ -392,7 +382,7 @@
                                 <li>Full licenses</li>
                                 <li>Free Updates</li>
                             </ul>
-                            <a href="#" class="button">Choose Plan</a>
+                            <a href="#0" class="button">Choose Plan</a>
                         </div>
                     </div>
                 </div>
@@ -402,11 +392,11 @@
 
 
     <!--============= App Screenshot Section Section Starts Here =============-->
-    <section class="app-screenshot">
+    <section id="app-screenshot">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>App Screenshot</h2>
+                    <h2 class="title">App Screenshot</h2>
                 </div>
                 <div class="col-lg-12 ss-group owl-carousel">
                     <div class="owl-item">
@@ -432,7 +422,7 @@
 
 
     <!--============= FAQ Section Section Starts Here =============-->
-        <section class="faq">
+        <section id="faq">
                 <div class="row">
                     <div class="col-lg-6">
                         <img class="faq-img" src="assets/images/faq_illustration.svg" alt="">
@@ -442,7 +432,7 @@
                         <div class="accordion-button open">
                             <div class="title">
                                 <span>What can you tell me about your infrastructure?</span>
-                                <a href="#" class="button">
+                                <a href="#0" class="button">
                                     <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.423416 0.340088L0.294434 0.474636L1.67847 1.9184L9.65767 10.2419L11.0417 11.6857L12.4257 10.2419L20.4049 1.9184L21.789 0.474636L21.66 0.340088H18.8919L19.0209 0.474636L11.0417 8.79815L3.06251 0.474636L3.19149 0.340088H0.423416Z" fill="white"/>
                                     </svg>
@@ -455,7 +445,7 @@
                         <div class="accordion-button">
                             <div class="title">
                                 <span>What type of support is included with this Service?</span>
-                                <a href="#" class="button">
+                                <a href="#0" class="button">
                                     <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.423416 0.340088L0.294434 0.474636L1.67847 1.9184L9.65767 10.2419L11.0417 11.6857L12.4257 10.2419L20.4049 1.9184L21.789 0.474636L21.66 0.340088H18.8919L19.0209 0.474636L11.0417 8.79815L3.06251 0.474636L3.19149 0.340088H0.423416Z" fill="white"/>
                                     </svg>
@@ -467,8 +457,8 @@
                         </div>
                         <div class="accordion-button">
                             <div class="title">
-                                <span>Can we link to or share information with on-premise systems?</span>
-                                <a href="#" class="button">
+                                <span>Can we link to or share information with systems?</span>
+                                <a href="#0" class="button">
                                     <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.423416 0.340088L0.294434 0.474636L1.67847 1.9184L9.65767 10.2419L11.0417 11.6857L12.4257 10.2419L20.4049 1.9184L21.789 0.474636L21.66 0.340088H18.8919L19.0209 0.474636L11.0417 8.79815L3.06251 0.474636L3.19149 0.340088H0.423416Z" fill="white"/>
                                     </svg>
@@ -481,7 +471,7 @@
                         <div class="accordion-button">
                             <div class="title">
                                 <span>Which License Do I Need?</span>
-                                <a href="#" class="button">
+                                <a href="#0" class="button">
                                     <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.423416 0.340088L0.294434 0.474636L1.67847 1.9184L9.65767 10.2419L11.0417 11.6857L12.4257 10.2419L20.4049 1.9184L21.789 0.474636L21.66 0.340088H18.8919L19.0209 0.474636L11.0417 8.79815L3.06251 0.474636L3.19149 0.340088H0.423416Z" fill="white"/>
                                     </svg>
@@ -504,8 +494,13 @@
     <!--============= Footer Section Starts Here =============-->
     <footer class="footer">
         <div class="row">
-            <div class="col-xl-2 col-lg-4 col-md-4 footer-logo">
-                <img src="./assets/images/logo.png" alt="">
+            <div class="col-xl-2 col-lg-4 col-md-4">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./assets/images/logo-preload.svg" alt="">
+                        <span>Appvlin</span>
+                    </a>
+                </div>
             </div>
             <div class="col-lg-3 col-md-4 usefull-link">
                 <h1>Usefull Link:</h1>
@@ -537,7 +532,7 @@
                 <div class="social-media-link">
                     <i class="fab fa-twitter"></i>
                     <i class="fab fa-instagram"></i>
-                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-facebook"></i>
                     <i class="fab fa-linkedin-in"></i>
                 </div>
                 <div class="app-download">

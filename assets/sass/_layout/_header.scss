@@ -1,0 +1,131 @@
+.show{
+    @include breakpoint(phone){
+        z-index: 100;
+        opacity: 1;
+    }
+}
+
+.hide{
+    z-index: 100;
+    @include breakpoint(phone){
+        z-index: -1;
+        opacity: 0;
+    }
+}
+
+.d-none{
+    display: none;
+}
+
+.d-block{
+    display: block;
+}
+
+//header section
+.header-section{
+    .header-wrapper{
+        display: flex;
+        align-items: center;
+        @include breakpoint(phone){
+            justify-content: space-between;
+            margin-top: 31px;
+        }
+        .logo{
+            margin-left: 5em;
+            @include logo-style();
+            @include breakpoint(phone){
+                margin-left: 5px;
+            }
+            @include breakpoint(tablet){
+                margin-left: 40px;
+            }
+        }
+        .burger-button{
+            display: none;
+            @include breakpoint(phone){
+                display: block;
+                i{
+                    color: white;
+                    font-size: 31px
+                }
+            }
+         }
+         .overlay-layer{
+             position: absolute;
+             left: 0;
+             top: 0;
+             background-color: black;
+             opacity: 0.5;
+             width: 100%;
+             height: 100%;
+             z-index: 2;
+         }
+        .menu{
+            margin-left: 21vw;
+            margin-top: 33px;
+            transition: 1s ease;
+            @include breakpoint(phone){
+                background-color: white;
+                position: absolute;
+                margin: 11em 0;
+                left: 0;
+                width: 100%;
+            }
+            @include breakpoint(tablet){
+               margin-top: 0px;
+            }
+            @include breakpoint(laptop){
+                margin-left: 23vw;
+            }
+            @include breakpoint(desktop){
+                margin-left: 25vw;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                @include breakpoint(phone){
+                    display: inline;
+                }
+                li{
+                    list-style: none;
+                    margin-right: 20px;
+                    font-size: 15px;
+                    @include breakpoint(phone){
+                        margin: 10px;
+                        border-bottom: 1px solid $primary-color;
+                    }
+                    a{
+                        color: $primary-color;
+                        text-decoration: none;
+                        &:hover{
+                            border-bottom: 2px solid $primary-color;
+                            border-radius: 2px;
+                            transition: 0.7s ease-in-out;
+                        }
+                    }
+                    &:nth-child(7){
+                        margin-right: 25%;
+                        @include breakpoint(phone){
+                            margin-right: 10px;
+                        }
+                    }
+                    &:nth-child(8){
+                        .select-lang{
+                            color: $primary-color;
+                            border: none;
+                            .list{
+                                display: block;
+                            }
+                            &::after{
+                                border-color: $primary-color;
+                            }
+                        }
+                        @include breakpoint(phone){
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

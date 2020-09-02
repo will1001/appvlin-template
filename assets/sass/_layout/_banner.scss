@@ -1,0 +1,209 @@
+//banner section
+#banner-1{
+    .bg-img{
+        img{
+            position: absolute;
+            top: 0;
+            height: 43em;
+            width:100%;
+            z-index: -1;
+            @include breakpoint(phone){
+                height: 69em;
+            }
+            @include breakpoint(tablet){
+                height: 41em;
+            }
+        }
+    }
+
+    .banner-shape{
+        @include breakpoint(phone){
+            display: none;
+        }
+        @include breakpoint(tablet){
+            display: none;
+        }
+        img{
+            top: 0;
+            right: 0;
+            width: 65%;
+            height: 37em;
+            position: absolute;
+        }
+    }
+
+    .banner-content{
+        width: 361px;
+        margin-top: 70px;
+        margin-left: 90px;
+        color: $white-color;
+        @include breakpoint(phone){
+            width: 200px;
+            margin-top: 5vh;
+            margin-left: 5vw;
+        }
+        @include breakpoint(tablet){
+            width: 200px;
+            margin-left: 50px;
+
+        }
+        h2{
+            font-size: 45px;
+            font-weight: bold;
+            margin-bottom: 50px;
+            @include breakpoint(phone){
+                font-size: 25px;
+            }
+            @include breakpoint(tablet){
+                font-size: 35px;
+            }
+        }
+        p{
+            font-size: 18px;
+            color: $font-color-1;
+            @include breakpoint(phone){
+                font-size: 14px;
+            }
+            @include breakpoint(tablet){
+                font-size: 14px;
+            }
+        }
+        a{
+            @include outline-button();
+        }
+
+    }
+
+    .banner-slider{
+        img{
+            display: flex;
+            height: 670px;
+            width: 333px;
+            margin-left: auto;
+            margin-right: auto;
+            @include breakpoint(phone){
+                margin-top: 40px;
+                height: 590px;
+                width: 280px;
+            }
+            @include breakpoint(tablet){
+                width: 18em;
+                height: 600px;
+                margin-top: 0vh;
+            }
+        }
+    }
+
+
+    .slider-button-group{
+        margin-top: 120px;
+        @include breakpoint(phone){
+            display: flex;
+            justify-content: center;
+            margin-top: 0px;
+        }
+        .active{
+            @include bg-setup("../images/button-bg.png");
+            @include breakpoint(phone){
+                box-shadow: inset 5px 4px 4px rgba(0, 0, 0, 0.25);;
+            }
+            .text{
+                color:$white-color;
+                 h3{
+                    color:$white-color!important;
+                    font-size: 20px;
+                 }
+                 
+            }
+
+            .svg-icon path {
+                fill: $white-color;
+            }
+            
+        }
+        .icon-button{
+            display: flex;
+            align-items: center;
+            color:$primary-color;
+            border: 1px solid $primary-color;
+            width: 321px;
+            text-decoration: none;
+            padding-left: 10px;
+            margin: 10px;
+            &::before {
+                content: "";
+                opacity: 0;
+                left: 25px;
+                width: 321px;
+                height: 77px;
+                @include bg-setup("../images/button-bg.png");
+                @include opacity-transition();
+                position: absolute;
+                @include breakpoint(phone){
+                    display: none;
+                }
+            }
+            @include breakpoint(phone){
+                @include responsive-banner-slider-button();
+            }
+            @include breakpoint(tablet){
+                @include responsive-banner-slider-button();
+            }
+            &:hover::before{
+                opacity: 1;
+            }
+            &:hover{
+                transition: 0.6s ease-in;
+                @include breakpoint(phone){
+                    background-color: $primary-color;
+                }
+                @include breakpoint(tablet){
+                    background-color: $primary-color;
+                }
+                .text{
+                    color:$white-color;
+                    h3{
+                        color:$white-color;
+                    }
+                }
+
+                .svg-icon path {
+                    fill: $white-color;
+                }
+            }
+           
+            .icon{
+                z-index: 1;
+                .svg-icon{
+                    margin-right: 10px;
+                }
+                
+              
+            }
+            .text{
+                z-index: 1;
+                width: 232px;
+                padding-top: 10px;
+                h3{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: darken($primary-color,30%);
+                    line-height: 13px;
+                }
+                p{
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+                
+                @include breakpoint(phone){
+                    display: none;
+                }
+                @include breakpoint(tablet){
+                    display: none;
+                }
+                
+            }
+        }
+    }
+    
+}

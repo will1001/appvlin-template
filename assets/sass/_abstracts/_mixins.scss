@@ -13,6 +13,53 @@
     color: $white-color;
     border-radius: 100px;
     text-decoration: none;
+    &:hover{
+        color: $primary-color;
+        background-color: white;
+        border: 1px solid $primary-color;
+        border-radius: 100px;
+        transition: 0.7s ease-in-out;
+    }
+}
+
+@mixin button1-outline() {
+    color: $primary-color;
+    background-color: white;
+    border: 1px solid $primary-color;
+    border-radius: 100px;
+    &:hover{
+        background-color: $primary-color;
+        color: $white-color;
+        border-radius: 100px;
+        text-decoration: none;
+        transition: 0.7s ease-in-out;
+    }
+}
+
+@mixin button2-outline() {
+    border: 1px solid #B158AC;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 17px 77px;
+    text-decoration: none;
+    color: #5A4F4F;
+    &:hover{
+        background-color: $primary-color;
+        color: white;
+        transition: 0.7s ease-in-out;
+    }
+}
+
+@mixin list-dot() {
+    list-style: none;
+    &::before{
+        content: "\2022";
+        color: $primary-color;
+        font-weight: bold;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em;
+    }
 }
 
 @mixin outline-button(){
@@ -29,6 +76,19 @@
     padding: 8px;
     border-radius: 10px;
     background-color: white;
+}
+
+@mixin logo-style{
+    a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    span{
+        color:white;
+        font-size: 21px;
+        margin-left: 10px;
+    }
 }
 
 //opacity transition 

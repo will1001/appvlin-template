@@ -1,0 +1,122 @@
+// footer
+
+.footer{
+    @include bg-setup("../images/footer-bg.svg");
+    margin-top: 10px;
+    padding: 51px 70px;
+    color:$white-color;
+    @include breakpoint(phone){
+        padding: 30px;
+    }
+    .logo{
+        @include logo-style();
+        @include breakpoint(phone){
+            margin:20px 0px;
+        }
+    }
+
+    ul{
+        padding: 0px;
+        li{
+            list-style: none;
+            color:$footer-text-color;
+        }    
+    }
+
+    .usefull-link{
+        h1{
+        font-size: 25px;
+        @include breakpoint(tablet){
+            font-size: 29px;
+        }
+        }
+        ul{
+            li{
+                line-height: 31px;
+            }
+        }
+    }
+    
+
+    .contact{
+        h1{
+            font-size: 28px;
+            @include breakpoint(tablet){
+                font-size: 29px;
+            }
+        }
+        i{
+            font-size: 12px;
+        }
+        ul{
+            li{
+                line-height: 31px;
+                width: 190px;
+            }
+        }
+    }
+
+    .social-media-link{
+        i{
+            background-color: $white-color;
+            color:$primary-color;
+            padding: 15px;
+            width: 47px;
+            height: 47px;
+            border-radius: 50%;
+            border: 1px solid white;
+            cursor: pointer;
+            &:hover{
+                color: white;
+                background-color: transparent;
+                
+                transition: 0.7s ease-in-out;
+            }
+        }
+    }
+
+    .app-download{
+        display: flex;
+        margin-top: 47px;
+        @include breakpoint(phone){
+            display: block;
+        }
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            width: 180px;
+            height: 63px;
+            border-radius: 10px;
+            margin-right: 19px;
+            text-decoration: none;
+            background-color: $google-play;
+            @include breakpoint(phone){
+                margin-top: 10px;
+            }
+            &:nth-child(2){
+                background-color: $app-store;
+            }
+            img{
+                width: 26px;
+                height: 28px;
+                margin-right: 10px;
+            }
+            .text{
+                color:$white-color;
+                span{
+                    font-size: 14px;
+                }
+                h1{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    hr{
+        background-color: $white-color;
+    }
+    
+}

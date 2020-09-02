@@ -1,0 +1,72 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: darken($primary-color,30%);
+    overflow: hidden;
+}
+
+.preloader-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.preloader-icon{
+    span {
+        position: absolute;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background: darken($primary-color,20%);
+        @include animation(preloader-fx,1.6s);
+        &:nth-child(2){
+            animation-delay: -0.8s;
+            -webkit-animation-delay: -0.8s;
+            background: $primary-color;
+        }
+    }
+    img{
+            width: 50px;
+            height: 50px;
+            @include animation(side-rotating,7s); 
+        }
+}
+
+
+.scrollToTop {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    color: #ffffff;
+    z-index: 999;
+    top: 400px;
+    right: 30px;
+    position: fixed;
+    border-radius: 5px;
+    -webkit-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    transform: translateY(100px);
+    background: darken($primary-color,10%);
+    text-align: center;
+    font-size: 16px;
+    visibility: hidden;
+}
+
+
+
+.scrollToTop.active {
+    -webkit-transform: translateY(100);
+    -ms-transform: translateY(100);
+    transform: translateY(100);
+    animation: bounceInDown 2s;
+    -webkit-animation: bounceInDown 2s;
+    -moz-animation: bounceInDown 2s;
+    visibility: visible;
+}

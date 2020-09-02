@@ -1,0 +1,78 @@
+// Security Section
+
+#security{
+    .illustration{
+        margin: 30px;
+        width: 90%;
+        @include breakpoint(phone){
+            margin: 10px;
+        }
+        @include breakpoint(tablet){
+            margin: 20px;
+        }
+        @include breakpoint(desktop){
+            margin: 50px;
+        }
+    }
+    .box-animation{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 90px;
+        z-index: -1;
+        @include animation(rotating,10s);
+        @include breakpoint(phone){
+            top:-34px;
+            padding: 60px;
+        }
+        @include breakpoint(laptop){
+            top:-85px;
+            padding: 120px;
+        }
+        
+    }
+    .ball-slice{
+        position: absolute;
+        top: -52px;
+        right: 92px;
+        width: 305px;
+        height: 305px;
+        @include animation(blur,3s);
+        @include breakpoint(phone){
+            top: 0;
+            right: 0;
+        }
+    }
+    .content{
+        padding-top: 96px;
+        @include breakpoint(phone){
+            margin: 10px;
+            padding-top: 16px;
+        }
+        @include breakpoint(tablet){
+        }
+        h5{
+            font-size: 24px;
+            line-height: 112%;
+            letter-spacing: 0.12em;
+        }
+        h2{
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 112%;
+            color: #BA77B5;
+        }
+        ul{
+            padding: 25px;
+            li{
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 27px;
+                color: #858585;
+                @include list-dot();
+            }
+        }
+    }
+
+}
