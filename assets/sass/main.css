@@ -441,7 +441,7 @@ p {
 
 .banner-1 .banner-content {
   width: 361px;
-  margin-top: 100px;
+  margin-top: 70px;
   margin-left: 90px;
   color: #ffffff;
 }
@@ -462,8 +462,9 @@ p {
 }
 
 .banner-1 .banner-content h2 {
-  font-size: 48px;
+  font-size: 45px;
   font-weight: bold;
+  margin-bottom: 50px;
 }
 
 @media (min-width: 0px) and (max-width: 575px) {
@@ -819,7 +820,13 @@ p {
   line-height: 184%;
 }
 
-.subscription input[type=text] {
+.subscription .subscribe-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.subscription .subscribe-form input[type=text] {
   border: 1px solid #C266BB;
   border-radius: 100px;
   width: 100%;
@@ -828,50 +835,48 @@ p {
 }
 
 @media (min-width: 0px) and (max-width: 575px) {
-  .subscription input[type=text] {
+  .subscription .subscribe-form input[type=text] {
     height: 55px;
   }
 }
 
-.subscription input[type=text]::-webkit-input-placeholder {
+.subscription .subscribe-form input[type=text]::-webkit-input-placeholder {
   color: #B2AFB2;
   font-size: 21px;
 }
 
-.subscription input[type=text]:-ms-input-placeholder {
+.subscription .subscribe-form input[type=text]:-ms-input-placeholder {
   color: #B2AFB2;
   font-size: 21px;
 }
 
-.subscription input[type=text]::-ms-input-placeholder {
+.subscription .subscribe-form input[type=text]::-ms-input-placeholder {
   color: #B2AFB2;
   font-size: 21px;
 }
 
-.subscription input[type=text]::placeholder {
+.subscription .subscribe-form input[type=text]::placeholder {
   color: #B2AFB2;
   font-size: 21px;
 }
 
 @media (min-width: 0px) and (max-width: 575px) {
-  .subscription input[type=text]::-webkit-input-placeholder {
+  .subscription .subscribe-form input[type=text]::-webkit-input-placeholder {
     font-size: 12px;
   }
-  .subscription input[type=text]:-ms-input-placeholder {
+  .subscription .subscribe-form input[type=text]:-ms-input-placeholder {
     font-size: 12px;
   }
-  .subscription input[type=text]::-ms-input-placeholder {
+  .subscription .subscribe-form input[type=text]::-ms-input-placeholder {
     font-size: 12px;
   }
-  .subscription input[type=text]::placeholder {
+  .subscription .subscribe-form input[type=text]::placeholder {
     font-size: 12px;
   }
 }
 
-.subscription .subscribe-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.subscription .subscribe-form input[type=text]:focus {
+  outline: none;
 }
 
 .subscription .subscribe-form a {
@@ -1276,7 +1281,7 @@ p {
 }
 
 .footer .usefull-link h1 {
-  font-size: 36px;
+  font-size: 25px;
 }
 
 @media (min-width: 576px) and (max-width: 1024px) {
@@ -1287,6 +1292,10 @@ p {
 
 .footer .usefull-link ul li {
   line-height: 31px;
+}
+
+.footer .contact h1 {
+  font-size: 28px;
 }
 
 @media (min-width: 576px) and (max-width: 1024px) {

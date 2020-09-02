@@ -172,3 +172,6 @@ $('.app-statistic h3').countUp({
       }, 500);
       return false;
     });
+
+    // aos js active
+    new WOW().init()

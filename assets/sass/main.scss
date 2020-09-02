@@ -87,9 +87,7 @@
     visibility: hidden;
 }
 
-// .scrollToTop:hover {
-//     color: #ffffff;
-// }
+
 
 .scrollToTop.active {
     -webkit-transform: translateY(100);
@@ -100,10 +98,6 @@
     -moz-animation: bounceInDown 2s;
     visibility: visible;
 }
-
-// .scrollToTop img {
-//     width: 100%;
-// }
 
 
 //header section
@@ -236,7 +230,7 @@
 
     .banner-content{
         width: 361px;
-        margin-top: 100px;
+        margin-top: 70px;
         margin-left: 90px;
         color: $white-color;
         @include breakpoint(phone){
@@ -249,8 +243,9 @@
             margin-left: 5vw;
         }
         h2{
-            font-size: 48px;
+            font-size: 45px;
             font-weight: bold;
+            margin-bottom: 50px;
             @include breakpoint(phone){
                 font-size: 25px;
             }
@@ -503,7 +498,9 @@
         letter-spacing: 0.1em;
         line-height: 184%;
     }
-    input[type=text]{
+    .subscribe-form{
+        display: flex;
+        input[type=text]{
         border: 1px solid $primary-color;
         border-radius: 100px;
         width: 100%;
@@ -519,9 +516,10 @@
                     font-size: 12px;
                 }
         }
+        &:focus{
+            outline: none;
+        }
     }
-    .subscribe-form{
-        display: flex;
         a{
             @include button1();
             position: absolute;
@@ -816,7 +814,7 @@
 
     .usefull-link{
         h1{
-        font-size: 36px;
+        font-size: 25px;
         @include breakpoint(tablet){
             font-size: 29px;
         }
@@ -831,9 +829,10 @@
 
     .contact{
         h1{
+            font-size: 28px;
             @include breakpoint(tablet){
-            font-size: 29px;
-        }
+                font-size: 29px;
+            }
         }
         i{
             font-size: 12px;
