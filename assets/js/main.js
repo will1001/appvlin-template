@@ -127,7 +127,7 @@ $(document).ready(function() {
 
 // counter up animation
 $('#app-statistic h3').countUp({
-      'time': 5000,
+      'time': 2000,
       'delay': 10
 });
 
