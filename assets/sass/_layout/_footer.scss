@@ -98,10 +98,15 @@
             &:nth-child(2){
                 background-color: $app-store;
             }
-            img{
-                width: 26px;
-                height: 28px;
-                margin-right: 10px;
+            .fa-play{
+                font-size: 25px;
+            }
+            .fa-apple{
+                font-size: 31px;
+            }
+            i{
+                color: white;
+                margin-right: 10px;  
             }
             .text{
                 color:$white-color;

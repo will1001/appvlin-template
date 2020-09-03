@@ -116,7 +116,7 @@
                  
             }
 
-            .svg-icon path {
+            svg path {
                 fill: $white-color;
             }
             
@@ -167,15 +167,18 @@
                     }
                 }
 
-                .svg-icon path {
+                svg path {
                     fill: $white-color;
                 }
             }
            
             .icon{
                 z-index: 1;
-                .svg-icon{
+                svg{
                     margin-right: 10px;
+                    width: 32px;
+                    height: 32px;
+                    fill:darken($primary-color,30%);
                 }
                 
               

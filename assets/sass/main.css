@@ -618,7 +618,7 @@ p {
   font-size: 20px;
 }
 
-#banner-1 .slider-button-group .active .svg-icon path {
+#banner-1 .slider-button-group .active svg path {
   fill: #ffffff;
 }
 
@@ -705,7 +705,7 @@ p {
   color: #ffffff;
 }
 
-#banner-1 .slider-button-group .icon-button:hover .svg-icon path {
+#banner-1 .slider-button-group .icon-button:hover svg path {
   fill: #ffffff;
 }
 
@@ -713,8 +713,11 @@ p {
   z-index: 1;
 }
 
-#banner-1 .slider-button-group .icon-button .icon .svg-icon {
+#banner-1 .slider-button-group .icon-button .icon svg {
   margin-right: 10px;
+  width: 32px;
+  height: 32px;
+  fill: #662962;
 }
 
 #banner-1 .slider-button-group .icon-button .text {
@@ -794,7 +797,7 @@ p {
 }
 
 #subscription p {
-  font-size: 14px;
+  font-size: 18px;
   color: #B2AFB2;
   letter-spacing: 0.1em;
   line-height: 184%;
@@ -1006,6 +1009,11 @@ p {
   padding-top: 31px;
 }
 
+#app-statistic .icon svg {
+  fill: #ffffff;
+  width: 30px;
+}
+
 #feature .illustration {
   padding: 45px 66px;
 }
@@ -1155,9 +1163,16 @@ p {
   margin-top: 20px;
 }
 
-#feature .content ul li svg {
-  width: 50px;
-  height: 50px;
+#feature .content ul li .icon {
+  border: 1px solid #C266BB;
+  border-radius: 100px;
+  padding: 10px;
+}
+
+#feature .content ul li .icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #C266BB;
 }
 
 #feature .content ul li p {
@@ -1269,13 +1284,14 @@ p {
   }
 }
 
-#pricing .icon img {
+#pricing .icon svg {
   width: 44px;
   height: 44px;
+  fill: #ffffff;
 }
 
 @media (min-width: 0px) and (max-width: 575px) {
-  #pricing .icon img {
+  #pricing .icon svg {
     width: 25px;
     height: 25px;
   }
@@ -1787,9 +1803,16 @@ p {
   background-color: #7988D8;
 }
 
-.footer .app-download a img {
-  width: 26px;
-  height: 28px;
+.footer .app-download a .fa-play {
+  font-size: 25px;
+}
+
+.footer .app-download a .fa-apple {
+  font-size: 31px;
+}
+
+.footer .app-download a i {
+  color: white;
   margin-right: 10px;
 }
 

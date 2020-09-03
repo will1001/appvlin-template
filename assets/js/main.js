@@ -1,62 +1,61 @@
 
 
-// burger-button phone view
-$('.burger-button').on('click', function (e) { 
-    var element = $('.menu');
-    var element2 = $('.burger-button i');
-    var element3 = $('.overlay-layer');
-    console.log("test")
+// burger_button on click phone view
+$('.burger_button').on('click', function (e) { 
+    var menu = $('.menu');
+    var burger_button = $('.burger_button i');
+    var overlay_layer = $('.overlay_layer');
   
-    if (element.hasClass('hide')) {
-        element.removeClass("hide");
-        element.addClass("show");
-        element2.removeClass("fa-bars");
-        element2.addClass("fa-times");
-        element3.removeClass("d-none");
-        element3.addClass("d-block");
+    if (menu.hasClass('hide')) {
+        menu.removeClass("hide");
+        menu.addClass("show");
+        burger_button.removeClass("fa-bars");
+        burger_button.addClass("fa-times");
+        overlay_layer.removeClass("d-none");
+        overlay_layer.addClass("d-block");
     } else {
-        element.addClass("hide");
-        element.removeClass("show");
-        element2.removeClass("fa-times");
-        element2.addClass("fa-bars");
-        element3.removeClass("d-block");
-        element3.addClass("d-none");
+        menu.addClass("hide");
+        menu.removeClass("show");
+        burger_button.removeClass("fa-times");
+        burger_button.addClass("fa-bars");
+        overlay_layer.removeClass("d-block");
+        overlay_layer.addClass("d-none");
     }   
 })
 
 
 // overlay layer click
-$('.overlay-layer').on('click', function (e) { 
-    var element = $('.menu');
-    var element2 = $('.burger-button i');
-    var element3 = $('.overlay-layer');
-        element.removeClass("show");
-        element.addClass("hide");
-        element2.removeClass("fa-times");
-        element2.addClass("fa-bars");
-        element3.removeClass("d-block");
-        element3.addClass("d-none");
+$('.overlay_layer').on('click', function (e) { 
+    var menu = $('.menu');
+    var element2 = $('.burger_button i');
+    var element3 = $('.overlay_layer');
+        menu.removeClass("show");
+        menu.addClass("hide");
+        burger_button.removeClass("fa-times");
+        burger_button.addClass("fa-bars");
+        overlay_layer.removeClass("d-block");
+        overlay_layer.addClass("d-none");
 })
 
 // list menu click
 $('.menu li a').on('click', function (e) { 
-    var element = $('.menu');
-    var element2 = $('.burger-button i');
-    var element3 = $('.overlay-layer');
-        element.removeClass("show");
-        element.addClass("hide");
-        element2.removeClass("fa-times");
-        element2.addClass("fa-bars");
-        element3.removeClass("d-block");
-        element3.addClass("d-none");
+    var menu = $('.menu');
+    var element2 = $('.burger_button i');
+    var element3 = $('.overlay_layer');
+        menu.removeClass("show");
+        menu.addClass("hide");
+        burger_button.removeClass("fa-times");
+        burger_button.addClass("fa-bars");
+        overlay_layer.removeClass("d-block");
+        overlay_layer.addClass("d-none");
 })
 
+
+// Banner slider 
 if ($('.banner-slider').length) {
       $('.banner-slider').owlCarousel({
         center: true,
         items: 1,
-        // autoplay: true,
-        // autoplayTimeout: 3000,
         loop: true,
         margin: 0,
         singleItem: true,
@@ -88,7 +87,7 @@ for (let i = 0; i < button.length; i++) {
     }, false);
 }
     
-
+// slider for app screen shot
 $('.ss-group').owlCarousel({
       loop: true,
       margin: 0,
@@ -111,7 +110,7 @@ $('.ss-group').owlCarousel({
       }
 })
 
-// faq
+// faq open / close content when button clicked
 
 $('#faq .accordion-button .title').on('click', function (e) { 
     var element = $(this).parent('#faq .accordion-button');
@@ -126,9 +125,9 @@ $(document).ready(function() {
 });
 
 
-// counter animation
+// counter up animation
 $('#app-statistic h3').countUp({
-      'time': 1500,
+      'time': 5000,
       'delay': 10
 });
 

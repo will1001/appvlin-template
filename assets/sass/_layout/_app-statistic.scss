@@ -4,4 +4,10 @@
     @include bg-setup("../images/bg-statistic.svg");
     color:$white-color;
     padding-top:31px;
+    .icon{
+        svg{
+            fill: $white-color;
+            width: 30px;
+        }
+    }
 }

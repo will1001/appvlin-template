@@ -43,9 +43,10 @@
             @include breakpoint(desktop){
                 margin-left: 13vw;
             }   
-            img{
+            svg{
                 width: 44px;
                 height: 44px;
+                fill: $white-color;
                 @include breakpoint(phone){
                     width: 25px;
                     height: 25px;
