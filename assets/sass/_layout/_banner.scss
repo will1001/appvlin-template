@@ -48,25 +48,10 @@
 
         }
         h2{
-            font-size: 45px;
-            font-weight: bold;
             margin-bottom: 50px;
-            @include breakpoint(phone){
-                font-size: 25px;
-            }
-            @include breakpoint(tablet){
-                font-size: 35px;
-            }
         }
         p{
-            font-size: 18px;
             color: $font-color-1;
-            @include breakpoint(phone){
-                font-size: 14px;
-            }
-            @include breakpoint(tablet){
-                font-size: 14px;
-            }
         }
         a{
             @include outline-button();

@@ -75,19 +75,13 @@
             }
         }
          h5{
-            font-size: 24px;
-            font-weight: bold;
             line-height: 112%;
             letter-spacing: 0.12em;
         }
         h2{
-            font-weight: bold;
-            font-size: 48px;
             line-height: 112%;
             color: #BA77B5;
-            @include breakpoint(phone){
-                font-size: 40px;
-            }
+          
         }
         ul{
             padding: 0px;
@@ -107,12 +101,10 @@
                     }
                 }
                 p{
-                    font-size: 18px;
                     line-height: 27px;
                     color: #B2AFB2;
                     margin-left: 9px;
                     @include breakpoint(phone){
-                        font-size: 14px;
                         line-height: 21px;
                     }
                 }

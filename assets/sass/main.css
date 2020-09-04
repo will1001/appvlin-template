@@ -168,8 +168,40 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
 }
 
-p {
-  font-size: 12px;
+h2 {
+  font-size: 45px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  h2 {
+    font-size: 31px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1024px) {
+  h2 {
+    font-size: 35px;
+  }
+}
+
+h5 {
+  font-size: 24px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  h5 {
+    font-size: 19px;
+  }
+}
+
+p, li {
+  font-size: 18px;
+}
+
+@media (min-width: 0px) and (max-width: 575px) {
+  p, li {
+    font-size: 14px;
+  }
 }
 
 .preloader {
@@ -514,38 +546,11 @@ p {
 }
 
 #banner-1 .banner-content h2 {
-  font-size: 45px;
-  font-weight: bold;
   margin-bottom: 50px;
 }
 
-@media (min-width: 0px) and (max-width: 575px) {
-  #banner-1 .banner-content h2 {
-    font-size: 25px;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 1024px) {
-  #banner-1 .banner-content h2 {
-    font-size: 35px;
-  }
-}
-
 #banner-1 .banner-content p {
-  font-size: 18px;
   color: #E5E5E5;
-}
-
-@media (min-width: 0px) and (max-width: 575px) {
-  #banner-1 .banner-content p {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 1024px) {
-  #banner-1 .banner-content p {
-    font-size: 14px;
-  }
 }
 
 #banner-1 .banner-content a {
@@ -774,6 +779,12 @@ p {
   left: 0;
 }
 
+@media (min-width: 0px) and (max-width: 575px) {
+  #subscribe .bg-shape {
+    height: 90%;
+  }
+}
+
 @media (min-width: 576px) and (max-width: 1024px) {
   #subscribe .bg-shape {
     height: 28%;
@@ -813,18 +824,15 @@ p {
 }
 
 #subscribe h5 {
-  font-size: 24px;
   letter-spacing: 0.12em;
 }
 
 #subscribe h2 {
-  font-size: 48px;
   color: #C266BB;
   letter-spacing: 0.05em;
 }
 
 #subscribe p {
-  font-size: 18px;
   color: #B2AFB2;
   letter-spacing: 0.1em;
   line-height: 184%;
@@ -977,6 +985,8 @@ p {
 
 @media (min-width: 0px) and (max-width: 575px) {
   #security .ball-slice {
+    width: 205px;
+    height: 205px;
     top: 0;
     right: 0;
   }
@@ -994,14 +1004,11 @@ p {
 }
 
 #security .content h5 {
-  font-size: 24px;
   line-height: 112%;
   letter-spacing: 0.12em;
 }
 
 #security .content h2 {
-  font-weight: bold;
-  font-size: 48px;
   line-height: 112%;
   color: #BA77B5;
 }
@@ -1012,7 +1019,6 @@ p {
 
 #security .content ul li {
   font-weight: 500;
-  font-size: 18px;
   line-height: 27px;
   color: #858585;
   list-style: none;
@@ -1156,23 +1162,13 @@ p {
 }
 
 #feature .content h5 {
-  font-size: 24px;
-  font-weight: bold;
   line-height: 112%;
   letter-spacing: 0.12em;
 }
 
 #feature .content h2 {
-  font-weight: bold;
-  font-size: 48px;
   line-height: 112%;
   color: #BA77B5;
-}
-
-@media (min-width: 0px) and (max-width: 575px) {
-  #feature .content h2 {
-    font-size: 40px;
-  }
 }
 
 #feature .content ul {
@@ -1203,7 +1199,6 @@ p {
 }
 
 #feature .content ul li p {
-  font-size: 18px;
   line-height: 27px;
   color: #B2AFB2;
   margin-left: 9px;
@@ -1211,7 +1206,6 @@ p {
 
 @media (min-width: 0px) and (max-width: 575px) {
   #feature .content ul li p {
-    font-size: 14px;
     line-height: 21px;
   }
 }
@@ -1375,7 +1369,6 @@ p {
 }
 
 #pricing .price-box ul li {
-  font-size: 18px;
   line-height: 40px;
   color: #B2AFB2;
   list-style: none;

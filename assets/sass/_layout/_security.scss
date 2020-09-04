@@ -40,6 +40,8 @@
         height: 305px;
         @include animation(blur,3s);
         @include breakpoint(phone){
+            width: 205px;
+            height: 205px;
             top: 0;
             right: 0;
         }
@@ -53,13 +55,10 @@
         @include breakpoint(tablet){
         }
         h5{
-            font-size: 24px;
             line-height: 112%;
             letter-spacing: 0.12em;
         }
         h2{
-            font-weight: bold;
-            font-size: 48px;
             line-height: 112%;
             color: #BA77B5;
         }
@@ -67,7 +66,6 @@
             padding: 25px;
             li{
                 font-weight: 500;
-                font-size: 18px;
                 line-height: 27px;
                 color: #858585;
                 @include list-dot();

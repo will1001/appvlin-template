@@ -10,6 +10,26 @@ h1, h2, h3, h4, h5{
     font-weight: bold;
 }
 
-p{
-    font-size: 12px;
+h2{
+    font-size: 45px;
+    @include breakpoint(phone){
+        font-size: 31px;
+    }
+    @include breakpoint(tablet){
+        font-size: 35px;
+    }
+}
+
+h5{
+    font-size: 24px;
+    @include breakpoint(phone){
+        font-size: 19px;
+    }
+}
+
+p,li{
+    font-size: 18px;
+    @include breakpoint(phone){
+        font-size: 14px;
+    }
 }
