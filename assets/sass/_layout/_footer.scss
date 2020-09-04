@@ -1,7 +1,7 @@
 // footer
 
 .footer{
-    @include bg-setup("../images/footer-bg.svg");
+    @include bg-setup("../images/bg.png");
     margin-top: 10px;
     padding: 51px 70px;
     color:$white-color;
@@ -10,6 +10,10 @@
     }
     .logo{
         @include logo-style();
+        //logo size
+        img{
+            width: 30px;
+        }
         @include breakpoint(phone){
             margin:20px 0px;
         }

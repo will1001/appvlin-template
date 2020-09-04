@@ -33,6 +33,10 @@
         .logo{
             margin-left: 5em;
             @include logo-style();
+            //logo size
+            img{
+                width: 30px;
+            }
             @include breakpoint(phone){
                 margin-left: 5px;
             }

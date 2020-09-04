@@ -1,15 +1,27 @@
 // Subscribe section
 
-#subscription{
-    @include bg-setup("../images/subscribe-bg.svg");
-    padding-top: 50px;
+#subscribe{
+    @include bg-setup("../images/bg.png");
+    margin-top: 50px;
     padding-left: 5em;
+    .bg-shape{
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        left: 0;
+        @include breakpoint(tablet){
+            height: 28%;
+        }
+        @include breakpoint(desktop){
+            height: 50%;
+        }
+    }
     @include breakpoint(phone){
-        padding-top: 20px;
+        margin-top: 20px;
         padding-left: 0;
     }
     @include breakpoint(tablet){
-        padding-top: 20px;
+        margin-top: 20px;
     }
     .subscribe-img{
         @include breakpoint(phone){

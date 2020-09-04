@@ -1,7 +1,7 @@
 // App Statistic Section
 
 #app-statistic{
-    @include bg-setup("../images/bg-statistic.svg");
+    @include bg-setup("../images/bg.png");
     color:$white-color;
     padding-top:31px;
     .icon{

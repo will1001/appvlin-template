@@ -306,6 +306,10 @@ p {
   margin-left: 10px;
 }
 
+.header-section .header-wrapper .logo img {
+  width: 30px;
+}
+
 @media (min-width: 0px) and (max-width: 575px) {
   .header-section .header-wrapper .logo {
     margin-left: 5px;
@@ -750,66 +754,85 @@ p {
   }
 }
 
-#subscription {
-  background: url("../images/subscribe-bg.svg");
+#subscribe {
+  background: url("../images/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: 50px;
+  margin-top: 50px;
   padding-left: 5em;
 }
 
+#subscribe .bg-shape {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  left: 0;
+}
+
+@media (min-width: 576px) and (max-width: 1024px) {
+  #subscribe .bg-shape {
+    height: 28%;
+  }
+}
+
+@media (min-width: 1537px) and (max-width: 1920px) {
+  #subscribe .bg-shape {
+    height: 50%;
+  }
+}
+
 @media (min-width: 0px) and (max-width: 575px) {
-  #subscription {
-    padding-top: 20px;
+  #subscribe {
+    margin-top: 20px;
     padding-left: 0;
   }
 }
 
 @media (min-width: 576px) and (max-width: 1024px) {
-  #subscription {
-    padding-top: 20px;
+  #subscribe {
+    margin-top: 20px;
   }
 }
 
 @media (min-width: 0px) and (max-width: 575px) {
-  #subscription .subscribe-img {
+  #subscribe .subscribe-img {
     width: 100%;
     margin: 10px;
   }
 }
 
 @media (min-width: 576px) and (max-width: 1024px) {
-  #subscription .subscribe-img {
+  #subscribe .subscribe-img {
     width: 100%;
   }
 }
 
-#subscription h5 {
+#subscribe h5 {
   font-size: 24px;
   letter-spacing: 0.12em;
 }
 
-#subscription h2 {
+#subscribe h2 {
   font-size: 48px;
   color: #C266BB;
   letter-spacing: 0.05em;
 }
 
-#subscription p {
+#subscribe p {
   font-size: 18px;
   color: #B2AFB2;
   letter-spacing: 0.1em;
   line-height: 184%;
 }
 
-#subscription .subscribe-form {
+#subscribe .subscribe-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#subscription .subscribe-form input[type=text] {
+#subscribe .subscribe-form input[type=text] {
   border: 1px solid #C266BB;
   border-radius: 100px;
   width: 100%;
@@ -818,51 +841,51 @@ p {
 }
 
 @media (min-width: 0px) and (max-width: 575px) {
-  #subscription .subscribe-form input[type=text] {
+  #subscribe .subscribe-form input[type=text] {
     height: 55px;
   }
 }
 
-#subscription .subscribe-form input[type=text]::-webkit-input-placeholder {
+#subscribe .subscribe-form input[type=text]::-webkit-input-placeholder {
   color: #B2AFB2;
   font-size: 21px;
 }
 
-#subscription .subscribe-form input[type=text]:-ms-input-placeholder {
+#subscribe .subscribe-form input[type=text]:-ms-input-placeholder {
   color: #B2AFB2;
   font-size: 21px;
 }
 
-#subscription .subscribe-form input[type=text]::-ms-input-placeholder {
+#subscribe .subscribe-form input[type=text]::-ms-input-placeholder {
   color: #B2AFB2;
   font-size: 21px;
 }
 
-#subscription .subscribe-form input[type=text]::placeholder {
+#subscribe .subscribe-form input[type=text]::placeholder {
   color: #B2AFB2;
   font-size: 21px;
 }
 
 @media (min-width: 0px) and (max-width: 575px) {
-  #subscription .subscribe-form input[type=text]::-webkit-input-placeholder {
+  #subscribe .subscribe-form input[type=text]::-webkit-input-placeholder {
     font-size: 12px;
   }
-  #subscription .subscribe-form input[type=text]:-ms-input-placeholder {
+  #subscribe .subscribe-form input[type=text]:-ms-input-placeholder {
     font-size: 12px;
   }
-  #subscription .subscribe-form input[type=text]::-ms-input-placeholder {
+  #subscribe .subscribe-form input[type=text]::-ms-input-placeholder {
     font-size: 12px;
   }
-  #subscription .subscribe-form input[type=text]::placeholder {
+  #subscribe .subscribe-form input[type=text]::placeholder {
     font-size: 12px;
   }
 }
 
-#subscription .subscribe-form input[type=text]:focus {
+#subscribe .subscribe-form input[type=text]:focus {
   outline: none;
 }
 
-#subscription .subscribe-form a {
+#subscribe .subscribe-form a {
   background-color: #C266BB;
   color: #ffffff;
   border-radius: 100px;
@@ -873,7 +896,7 @@ p {
   padding: 10px 30px;
 }
 
-#subscription .subscribe-form a:hover {
+#subscribe .subscribe-form a:hover {
   color: #C266BB;
   background-color: white;
   border: 1px solid #C266BB;
@@ -883,7 +906,7 @@ p {
 }
 
 @media (min-width: 0px) and (max-width: 575px) {
-  #subscription .subscribe-form a {
+  #subscribe .subscribe-form a {
     margin-top: 15px;
     font-size: 12px;
     padding: 5px 10px;
@@ -1001,7 +1024,7 @@ p {
 }
 
 #app-statistic {
-  background: url("../images/bg-statistic.svg");
+  background: url("../images/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1664,7 +1687,7 @@ p {
 }
 
 .footer {
-  background: url("../images/footer-bg.svg");
+  background: url("../images/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1693,6 +1716,10 @@ p {
   color: white;
   font-size: 21px;
   margin-left: 10px;
+}
+
+.footer .logo img {
+  width: 30px;
 }
 
 @media (min-width: 0px) and (max-width: 575px) {
