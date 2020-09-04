@@ -1,10 +1,10 @@
 
 
 // burger_button on click phone view
-$('.burger_button').on('click', function (e) { 
+$('.burger-button').on('click', function (e) { 
     var menu = $('.menu');
-    var burger_button = $('.burger_button i');
-    var overlay_layer = $('.overlay_layer');
+    var burger_button = $('.burger-button i');
+    var overlay_layer = $('.overlay-layer');
   
     if (menu.hasClass('hide')) {
         menu.removeClass("hide");
@@ -25,10 +25,10 @@ $('.burger_button').on('click', function (e) {
 
 
 // overlay layer click
-$('.overlay_layer').on('click', function (e) { 
+$('.overlay-layer').on('click', function (e) {
     var menu = $('.menu');
-    var element2 = $('.burger_button i');
-    var element3 = $('.overlay_layer');
+    var burger_button = $('.burger-button i');
+    var overlay_layer = $('.overlay-layer');
         menu.removeClass("show");
         menu.addClass("hide");
         burger_button.removeClass("fa-times");
@@ -40,8 +40,8 @@ $('.overlay_layer').on('click', function (e) {
 // list menu click
 $('.menu li a').on('click', function (e) { 
     var menu = $('.menu');
-    var element2 = $('.burger_button i');
-    var element3 = $('.overlay_layer');
+    var burger_button = $('.burger-button i');
+    var overlay_layer = $('.overlay-layer');
         menu.removeClass("show");
         menu.addClass("hide");
         burger_button.removeClass("fa-times");

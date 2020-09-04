@@ -15,7 +15,11 @@
             margin-bottom: 80px;
         }
     }
-    
+    .price-box-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .icon{
             background-color: $primary-color;
             border-radius: 50%;
@@ -23,25 +27,16 @@
             height: 100px;
             padding: 30px;
             position: absolute;
-            margin-left: 9.5em;
             z-index: 1;
-            top: -50px;
+            top: 7px;
             @include breakpoint(phone){
-                top: 0;
-                margin: 4vh 33vw;
+                top: 23px;
                 width: 75px;
                 height: 75px;
                 padding: 25px;
             }   
             @include breakpoint(tablet){
-                top: 0;
-                margin-left: 40vw;
-            }   
-            @include breakpoint(ipad-pro){
-                margin-left: 43vw;
-            }   
-            @include breakpoint(desktop){
-                margin-left: 13vw;
+                top: 45px;
             }   
             svg{
                 width: 44px;
@@ -56,24 +51,14 @@
 
     .price-box{
         border: 1px solid $primary-color;
-        height: 536px;
         width: 100%;
-        margin: 0 auto;
-         @include breakpoint(phone){
-            margin: 10vh 0px;
-        }   
-         @include breakpoint(tablet){
-            margin: 50px auto;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include breakpoint(tablet){
+            margin-top: 100px;
             width: 450px;
-            height: 560px;
-        }   
-        @include breakpoint(ipad-pro){
-            width: 55%;
-            height: 580px;
-        }
-        @include breakpoint(desktop){
-            width: 500px;
-            height: 580px;
         }
         h2,h3,ul{
             text-align: center;
@@ -96,7 +81,7 @@
             margin-top:40px;
             margin-bottom:5vh;
             list-style-position: inside;
-            margin-right: 50px;
+            padding: 0;
             li{
                 font-size: 18px;
                 line-height: 40px;
@@ -106,21 +91,8 @@
         }
         a{
             @include button1-outline();
-            margin-left: 7em;
+            margin-bottom: 20px;
             padding: 10px 30px;
-            @include breakpoint(phone){
-                margin-left: 23vw;
-                padding: 10px 20px;
-            }
-            @include breakpoint(tablet){
-                margin-left: 9em;
-            }
-            @include breakpoint(ipad-pro){
-                margin-left: 11em;
-            }
-            @include breakpoint(desktop){
-                margin-left: 10em;
-            }
         }
     }
 }

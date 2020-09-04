@@ -4,37 +4,11 @@
     .title{
         margin-bottom: 50px;
     }
-    img{
-        @include breakpoint(phone){
-            width: 100%;
-            margin-left: 10vw;
-        }
-        @include breakpoint(tablet){
-            width: 80%;
-        }
-        @include breakpoint(desktop){
-            margin: 47px;
-        }
-    }
     .ss-group{
-        padding-left: 80px;
-        @include breakpoint(phone){
-            padding-left: 0px;
+        .owl-item{
+            display: flex;
+            justify-content: center;
         }
-        @include breakpoint(tablet){
-            padding-left: 100px;
-        }
-        @include breakpoint(ipad-pro){
-            padding-left: 100px;
-        }
-        img{
-            &:hover{
-                transform: scale(1.2);
-                z-index: 999;
-                transition: 0.3s ease;
-            }
-        }
-        
     }
     
 }
