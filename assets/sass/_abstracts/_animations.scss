@@ -72,6 +72,35 @@
             @include transform(translateX(0px))
         }
     }
+    
+    @-webkit-keyframes border-draw {
+    0%{
+        @include transform(border)   
+    }
+    50%{
+        @include transform(translateX(-300px))
+    }
+    75%{
+        @include transform(translateX(-150px))
+    }
+    100%{
+        @include transform(translateX(0px))
+    }
+}
+    @keyframes border-draw {
+        0%{
+            @include transform(translateX(0px))   
+        }
+        50%{
+            @include transform(translateX(-300px))
+        }
+        75%{
+            @include transform(translateX(-150px))
+        }
+        100%{
+            @include transform(translateX(0px))
+        }
+    }
 
 
 @-webkit-keyframes move-left {
