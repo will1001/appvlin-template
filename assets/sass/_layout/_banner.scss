@@ -54,7 +54,8 @@
             color: $font-color-1;
         }
         a{
-            @include outline-button();
+            @include button3-outline();
+            
         }
 
     }

@@ -62,13 +62,23 @@
     }
 }
 
-@mixin outline-button(){
+@mixin button3-outline(){
     text-decoration: none;
     color:$white-color;
     border: 1px solid $white-color;
     padding: 13px 50px;
     border-radius: 5px;
     line-height: 74px;
+  &:hover{
+        border-top-color: darken($primary-color,30%);
+        border-right-color: darken($primary-color,30%);
+        border-bottom-color: darken($primary-color,30%);
+        border-left-color: darken($primary-color,30%);
+        transition: border-top-color 0.6s ease,
+                    border-right-color 0.6s ease 0.2s,
+                    border-bottom-color 0.6s ease 0.3s,
+                    border-left-color 0.6s ease 0.4s;
+  }
 }
 
 @mixin responsive-banner-slider-button{
